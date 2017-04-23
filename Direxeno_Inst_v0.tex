@@ -1,0 +1,61 @@
+\documentclass[a4paper,11pt]{article}
+\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
+             % images in pdf, png or jpg format)
+
+\usepackage{jinstpub} % for details on the use of the package, please
+                     % see the JINST-author-manual
+
+
+\title{\boldmath A title with some math: $x=1$}
+
+
+%% %simple case: 2 authors, same institution
+%% \author{A. Uthor}
+%% \author{and A. Nother Author}
+%% \affiliation{Institution,\\Address, Country}
+
+%% more complex case: 4 authors, 3 institutions, 2 footnotes
+%\author[a,b,1]{F. Irst,\note{Corresponding author.}}
+%\author[c]{S. Econd,}
+%\author[a,2]{T. Hird\note{Also at Some University.}}
+%\author[c,2]{and Fourth}
+%
+%% The "\note" macro will give a warning: "Ignoring empty anchor..."
+%% you can safely ignore it.
+%
+%\affiliation[a]{One University,\\some-street, Country}
+%\affiliation[b]{Another University,\\different-address, Country}
+%\affiliation[c]{A School for Advanced Studies,\\some-location, Country}
+%
+%% e-mail addresses: only for the forresponding author
+%\emailAdd{first@one.univ}
+%
+%
+%
+
+\abstract{Abstract...}
+
+
+
+\keywords{Only keywords from JINST's keywords list please}
+
+
+\arxivnumber{1234.56789} % only if you have one
+
+\begin{document}
+\maketitle
+\flushbottom
+\input{Intro}
+\input{ExpSetup}
+\input{DAQ}
+\input{simulation}
+\input{summary}
+
+
+%%% BIBLIOGRAPHY %%%
+
+%\bibliographystyle{apsrev}
+\bibliographystyle{unsrt}
+\bibliography{DirexenoBib}
+
+\end{document}
