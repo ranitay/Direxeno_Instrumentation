@@ -1,10 +1,19 @@
 \section{Experimental Setup}
 \label{expSetup}
-The experimental setup that is described in this section, is designed to measure, the properties of LXe scintillation. However it is designed in a modular way, so it can serve different requirements from different future experiments. There are three main building blocks consisting the full setup, The purification and circulation system, the cryogenic system, and the detector system. Each building block can be replaced without effecting the others. The full assembly (figure.~\ref{fig:fulldet}) is held on two separate wracks which are joined using a 100mm bar with shock absorbers on both sides.  
+The experimental setup that is described in this section, is designed to measure, the properties of LXe scintillation. However it is designed in a modular way, so it can serve different requirements from different future experiments. There are three main building blocks consisting the full setup, The purification and circulation system, the cryogenic system, and the detector system. Each building block can be replaced without effecting the others. The full assembly (figure.~\ref{fig:fulldet}) is held on three separate wracks, one for the DAQ, while the two others which hold the the detector and purification system are joined using a 100mm bar with shock absorbers on both sides.   
 
-\subsection{Purification and Circulation System}
-\label{subsec:purification}
+\subsection{Gas handling system}
+\label{subsec:gas}
 
+A typical LXe detector must keep a high level of purity. Careful selection and meticulously cleaning of all parts before mounting, is needed, however is not sufficient. The desired level of most detectors of impurity concentration is at the level of 1 ppb $O_2$ equivalent~\cite{Aprile:2009dv}. This is crucial to allow ionization electrons drift for several cm. To reach that level in a reasonable amount of time (several days instead of months), continuous purification is needed. The gas system, provides this process, alongside with all gas handling operations such as filling and recuperation. A schematic of this system is shown in fig.~\ref{fig:gasSchematic}. All pipes are made of 1/4" SS, and all valves used are Swagelok bellow sealed valves.
+
+During purification mode, xenon is taken from the chamber (in liquid phase)
+passes through a heat exchanger\footnote{GEA GBS100M-24 plate heat exchanger} where it is heated and vapored. Then the xenon is forced by a KNF diaphragm pump into a hot getter\footnote{MONO-TORR
+PS4-MT15-R-2} which cleans the xenon from most impurities. The xenon
+also passes through an MKS Mass Flow Controller\footnote{MKS mass flow controller} (MFC). 
+
+After the xenon is purified, it is delivered back to the cryogenic system through the heat exchanger, there the remained xenon gas is liquefied before it continuous back to the chamber.
+ 
 
 \subsection{Cryogenic System}
 \label{subsec:cryo}
