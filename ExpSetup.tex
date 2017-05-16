@@ -17,21 +17,35 @@ After the xenon is purified, it is delivered back to the cryogenic system throug
 
 \begin{figure}[t!]
 \centerline{\includegraphics[width=1.\linewidth]{GasSchematics.png}}
-\caption{Schematics of the purification system. High presure valves are indicated as valves with arcs. Needle valves are indicated as a valve with an arrow.}
+\caption{Schematics of the purification system. High pressure valves are indicated as valves with arcs. Needle valves are indicated as a valve with an arrow.}
 \label{fig:gasSchematic}
 \end{figure}
 \subsection{Cryogenic System}
 \label{subsec:cryo}
 
-Remote cooling is generally used in DM experiments due to background radiating from the cooler to the detector. Although in our system this is not of great importance there are still two advantages to remote cooling, lowering acoustic noise and  flexibility. The cryogenic system is connected on one side to the gas system and on the other to the chamber. Any change in the system (e.g, cryo-cooler type or  model) requires the change of that specific part without changing the detector nor the gas system.
+Remote cooling is generally used in DM experiments due to background radiating from the cooler to the detector. Although in our system this is not of great importance there are still several advantages to remote cooling such as: lowering acoustic noise from the cryo-cooler and flexibility to design changes. The cryogenic system is connected on one side to the gas system and on the other to the detector chamber, any change in the system (e.g, cooler type or model) requires the change of that specific part without changing the detector nor the gas system.
 
-The whole system is made out of super insulated double walls.  The cryo-cooler is connected to the top of the cooling tower and in thermal contact with a copper cold finger. The cold finger design was adopted from XENON1T experiment and is made of large fins for better heat transport from the GXe. The
-cryo-cooler of choice is QDrive 20BB 9p6 A 3 AYNBNCO which gives up to 70W
-cooling power at LXe temperature. The main advantage of this cooler is that it is thermally regulated, thus there is no need for working at full power and heating to desired temperature, as is done in other xenon experiments.
-The gas is liquefied by the fins of the cold finger and the Xe droplets are collected with a funnel and guided by a 1/4" tube to the detector. Evaporated Xe from the detector travels up inside the connecting bellow and gets liquefied again. The xenon that is going out of the cryogenic system towards the hot getter, passes through a heat exchanger, and therefore most of the coming xenon in is already liquefied.
+The system is made out of two chambers, the outer vessel (OV) which holds the insulation vacuum, and the inner vessel (IV) that holds the xenon. In addition to the vacuum which prevents heat leaks from diffusion and convection, the entire IV is covered by multi layer aluminized Myler to prevent heating via radiation A picture of the detector and the CAD design are shown in Fig~\ref{fig:cryo}. 
+\begin{figure}
+   \centering
+    \begin{subfigure}[b]{0.25\textheight}
+    \includegraphics[width=\textwidth]{cryogenic1.png}
+    \includegraphics[width=\textwidth]{CryoOpen_small.jpg}
+    \end{subfigure}
+        \caption{(Top) CAD view of the cryogenic system. (Bottom) Pictue of the cryogenic system. \label{fig:cryo}}
+\end{figure}
 
-The inner vessel is closed with 6" CF flanges whereas the outer vessel with larger 10" ones. The space between these two vessels is held in vacuum for heat insulation (convection and diffusion). The inner vessel will be covered by multi layer aluminized Myler to prevent heating via radiation.
-Initial performance tests, such as leak tests, vacuum condition, cooling and more,were conducted. We are currently liquefying xenon for the first time in a temporary vessel which is the last test before mounting the detector itself.
+
+The OV is made of a 10" CF cube, with ports on all six faces (e.g., FT, pumping ports, view ports). The space between the OV and IV is held in vacuum for heat insulation (convection and diffusion). This vacuum is shared with the detector one via a 6" CF flexible bellows.
+
+The IV is made of XXX~\,cm height cylinder with 6" CF flanges on the top and bottom parts of it, and it holds inside xenon. A XXX~" cold finger is welded to the top flange of the IV. The design of the cold finger is similar to the design of~\cite{xe100_instr2012}, the inner part of the cold finger is made of long fins, therefore the surface area of it is bigger resulting in a better heat transport. The upper part of the cold finger is in thermal contact with the cryo-cooler~\footnote{QDrive 20BB 9p6 A 3 AYNBNCO} via a cooper adapter. The copper adapter hold two $100\Omega$ pt resistor which are connected to a PID reader\footnote{cryo-con model 18i Cryogenic Temp Monitor} fot temperature measurements. A Cartridge-heater is also inserted to the copper adapter for emergency heating. 
+
+The cryo-cooler provides up to 70 W of cooling power,and is connected via a 4 1/2" flange to the OV top flange, and reaching the IV top flange. Common cryo-coolers used for xenon experiments, work in maximal cooling mode permanently. The QDrive, instead, has temperature control allowing it vary the cooling power, which enables to set the temperature with fluctuations smaller then $0.1~\mathrm{C^{\circ}}$ on the cooler itself.
+
+On the inner side of the bottom flange of the IV a thin SS funnel is installed collecting all LXe drops from the cold finger, and delivering them to the  detector part. This flange is connected to the detector part, via a 3 3/8" flexible bellows. This bellows hosts two small pipes connected to the circulation system, and a third pipe coming from the funnel, all three pipes deliver LXe whereas the GXe is filling the bellows.
+
+      
+
 
 \subsection{The Detector}
 \label{subsec:det}
