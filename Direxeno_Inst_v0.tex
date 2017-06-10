@@ -14,7 +14,11 @@
                      % see the JINST-author-manual
 \usepackage{lineno}
 
-\newcommand{\RanComment}[1]{\textcolor{blue}{#1}}
+\newcommand{\RanComment}[1]{\textcolor{green}{#1}}
+\usepackage{soul}                     
+\newcommand{\mmd}[1]{\textcolor{blue}{[{\bf MMD:} #1]}}
+\makeatother
+
 
 \title{Directional Xenon Measurement }
 \linenumbers
@@ -57,7 +61,7 @@
 \maketitle
 \flushbottom
 \input{Intro}
-\input{ExpSetup}
+\input{ExpSetup1}
 \input{DAQ}
 \input{simulation}
 \input{summary}
