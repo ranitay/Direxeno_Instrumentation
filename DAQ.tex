@@ -15,23 +15,22 @@ The schematic layout
 of the DAQ system is shown in Fig.~{\ref{Fig:DAQscheme}}. All the 20 PMTs 
 are oriented in the holder assembly which was discussed in section---. 
 The PMTs are ramped up to +800V (the maximum is +900V) using a 24 channel 
-VME high volatge distributor module (VDS18130p) from iseg. The voltage is 
-monirored by the GUI based control software provided by iseg. 
-For clearity in understanding, we term the raw electrical pulse output of 
-the PMTs as S{\it i} (raw), {\it i} = 1 -- 20. These raw pulses are then 
+VME high volatge distributor module (VDS18130p) from iseg. \sout{The voltage is 
+monitored by the GUI based control software provided by iseg}. 
+\sout{For clarity in understanding,} we define the raw electrical pulse output of the PMTs as S{\it i} (raw), where {\it i} = 1 -- 20. These raw pulses are then 
 amplified and shaped using two NIM photomultiplier preamplifiers (Phillips 776). 
 Each of the preamplifier model provides 16 independent  and direct-coupled 
 amplifiers channels. The preamplifier channels operates from DC to 275 MHz and 
 produce two identical 50 $\Omega$ non inverting outputs with voltage gains of 10. 
-We term the amplified pulses as S{\it i}, {\it i} = 1 -- 20. One of the 
-two identical analog outputs from each channel is ereingconverted to a digital 
+We \sout{term} \RanComment{define} the amplified pulses as S{\it i}, ({\it i} = 1 -- 20). One of the 
+two identical analog outputs from each channel is \RanComment{ What is this word ereingconverted} to a digital 
 signal with an Analog to Digitizer converter (ADC V1742). 
 
 The ADC module V1742 
 is a VME board with two 12bit 5GS/s Switched capacitor Digitizer sections, 
-each of them with 16+1 channels, based on DRS4 chip. Th dynamic range of the input 
+each of them with 16+1 channels, based on DRS4 chip. The dynamic range of the input 
 signal is 1 Vpp with adjustable DC offset. This module can sample either bipolar or 
-unipolar analog input signal within the dymnamic range in a circular 
+unipolar analog input signal within the dynamic range in a circular 
 analog memory buffer, with default sampling frequency choices 5GS/s, 2.5 GS/s 
 or 2 GS/s. As soon as a trigger signal reaches, all the analog memory 
 buffers gets frozen and then gets digitized into a digital memory buffer 
