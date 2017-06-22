@@ -19,7 +19,7 @@ The full assembly (Fig.~\ref{fig:fulldet}) is held on three separate wracks, one
 \label{fig:fulldet}
 \end{figure}
 
-\subsection{Gas handling system}
+\subsection{Gas handling system \mmd{Can we write Gar Purification System?}}
 \label{subsec:gas}
 
 A typical LXe detector must keep a high level of purity. Careful selection and meticulously cleaning of all parts before mounting, 
@@ -45,7 +45,7 @@ a valve with an arrow.}
 \label{fig:gasSchematic}
 \end{figure}
 
-\subsection{Cryogenic system}
+\subsection{The Cryogenic system}
 \label{subsec:cryo}
 
 Remote cooling is generally used in DM experiments due to background radiating from the cooler to the detector. Although in our system 
@@ -88,16 +88,15 @@ connected to the circulation system, and a third pipe coming from the funnel, al
 
 \mmd{The detector refers to the chamber and its inner assembly that contains the liquid Xenon bubble, the photomultiplier detectors 
 around it and their accessories. This chamber is placed below 
-the cryogenic system.}
-\sout{The Detector part refers to the whole apparatus below the cryogenic system.} 
-\RanComment{This needs to be changed so it will be written in sec. describe bla and in sec .. describe blabla, it is bad practice to say in the next two subsec, as this can be changed in the future.} \mmd{We describe the detector chamber and its interface to the cryogenic system in section \ref{subsubsec:detchamber}. In the two 
-subsequent sections we discuss the optical assembly that holds the liquid Xenon and the Photomultiplier detectors.}
+the cryogenic system. We describe the detector chamber and its interface 
+to the cryogenic system in section \ref{subsubsec:detchamber}. In section \ref{subsubsec:sphere} we discuss the assembly 
+that consists of the HPFS sphere to hold liquid Xenon and the Photomultiplier detectors distributed around the sphere.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{\mmd{The detector chamber and its interface to the cryogenic system}}
+\subsubsection{\mmd{The Detector Chamber}}
 \label{subsubsec:detchamber}
 
-The \RanComment{detector} chamber is built such that apart from the interface to the cryogenic system, it can be changed and modified easily for future experiments.
+The detector chamber is built such that apart from the interface to the cryogenic system, it can be changed and modified easily for future experiments.
 The interface unit is built out of 2 flanges welded together via 7 tubes, which serve as service ports for electrical and other feedthroughs. 
 The upper flange, ISO-K NW320, is part of the OV and shares the insulation vacuum of the cryogenic system, the bottom one , CF-8", is 
 part of an IV for future detectors, and would hold xenon inside. For our experiment we modified the CF flange to fit also a $4\frac{5}{8}$" CF 
@@ -106,25 +105,34 @@ flange which we use.
 The OV is closed with a cylinder XXX~\,cm height closed from the bottom with another ISO-K NW320 flange, the height of the cylinder is determined 
 such that the maximal height of the whole apparatus is 190~\,cm, allowing the mobility of the detector through standard doors.
  
-The $4\frac{5}{8}$" CF flange is connected to a closed vessel internally divided into two parts. This vessel serves as a xenon reservoir. The two parts of the vessel are connected to a spherical orb from above (inner part) and from below (outer part). LXe is circulated such that new LXe drips into 
+The $4\frac{5}{8}$" CF flange is connected to a closed vessel internally divided into two parts. This vessel serves as a xenon reservoir. 
+The two parts of the vessel are connected to a spherical orb from above (inner part) and from below (outer part). LXe is circulated such that new LXe drips into 
 the outer part and pumped from the inner one. This way the liquid level is controlled, and the sphere itself is always filled with LXe. 
 
-\RanComment{I think this part should be deleted as it is explained after.The main part of the detector is the spherical orb, which is made of fused silica. In the center of it, a smaller sphere is curved to hold the 
-LXe, two invar pipes are connected to it from the top and bottom with SS mini-CF flanges at the end, to circulate the xenon (see Fig.~\ref{fig:sphere}). 
-The sphere stands in the center of 20 PMTs\footnote{r8520-406 Hamamatsu 1" PMT} to detect light emitted from the LXe.}
 
-\RanComment{The bottom flange of the sphere is held using a brass holder to prevent force or torque applied on the sphere while mounting the detector. The 
-brass holder is connected to a plate held from the top 8" flange, and is also used to align this plate at first installation. }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{\mmd{The HPFS Shell to contain LXe}}
+\subsubsection{The Sphere}
 \label{subsubsec:sphere}
-\RanComment{missing general explanation about the sphere might be that the part I suggested to delete before should go here.}
-The LXe target bubble should not be too large in order to avoid double scatters. A spherical shell made of high purity fused silica 
-with high transmittance is designed to hold the LXe target. This shell should be large enough to reduce internal reflections, but not too large which would 
-attenuate the scintillation light. \sout{Also} The material of the shell should have a refractive index similar to LXe in order to have minimal \RanComment{diffraction when photons from the LXe, move travel from LXe to the sphere and saving the original \sout{change in} the original direction of the LXe scintillation} \sout{ photons coming from the target}. 
 
-\RanComment{I think there is no point saying that according to the factshit ... we should state that we measured it, maybe indicate that our result are consistent with data from supplier (not even sure this is needed.) }We chose corning HPFS 8655 as the shell material. According to the factsheet, the refractive index of HPFS 8655 is 1.575 at 185 nm (LXe R.I. 1.61) and the transmittance 99.8\%/cm at 175 nm. In Fig.~\ref{fig:hpfsRIcalibration}, \sout{we show} \RanComment{are} the refractive indices at various wavelegths as given by the HPFS factsheet and also a naive extrapolation at lower wavelengths which are relevant to us.
+The central component of the detector assembly is the hollow sphere which holds the LXe target bubble. A spherical 
+shell made of high purity fused silica with high transmittance is designed to hold the LXe target.
+ The xenon will be circulated Two invar tubes are connected to it from the top and bottom with 
+SS mini-CF flanges at the end, to circulate the xenon (see Fig.$\sim$\ref{fig:sphere}). 
+The bottom flange of the sphere is held using a brass holder to prevent force or torque applied on the sphere while mounting the detector. The 
+brass holder is connected to a plate held from the top 8" flange, and is also used to align this plate at first installation.
+A set of 20 PMTs\footnote\{r8520-406 Hamamatsu 1" PMT\} are placed around the sphere to detect light emitted 
+from the LXe.
+
+
+The LXe target bubble should not be too large in order to avoid double scatters. This shell should be large enough to 
+reduce internal reflections, but not too large which would attenuate the scintillation light. The material of the shell 
+should have a refractive index similar to LXe in order to have minimal 
+diffraction from the original direction of the photons when they travel from the LXe target to the sphere. 
+We chose corning HPFS 8655 as the shell material. The refractive index of HPFS 8655 is 1.575 at 185 nm (LXe R.I. 1.61). 
+ In Fig.~\ref{fig:hpfsRIcalibration}, 
+are the refractive indices at various wavelegths as given by the HPFS factsheet and also a naive extrapolation at lower 
+wavelengths which are relevant to us. %and the transmittance 99.8\%/cm at 175 nm.
 
 \begin{figure}
    \centering
@@ -134,10 +142,13 @@ attenuate the scintillation light. \sout{Also} The material of the shell should 
    \label{fig:hpfsRIcalibration}
 \end{figure}
 
-The transmittance of the material is extremely crucial for us to optimize the dimension of the fused silica shell. Therefore, we obtained a 6 mm thick sample of HPFS 8655 and performed a transmittance testing a VUV monochromator setup. 
+The transmittance of the material is extremely crucial for us to optimize the dimension of the shell. Therefore, we obtained a 6 mm 
+thick sample of HPFS 8655 and performed a transmittance testing a VUV monochromator setup. 
 A deuterium light source was used to generate a spectrum in
-the range (110 - 950)~\,nm, peaked approximately at 160~\,nm. The window of the light source faced a vacuum space pumped to below $10^{-4}$ Torr. The monochromator allows to select the desired wavelengths using a manually rotatable holographic diffraction grating. A PMT placed
-in the vacuum measured the intensity of light emitted from the monochromator, with and without the fused silica sample. The ratio of measured intensities was used to calculate the transmittance of the material. In fig.~\ref{fig:transmittance} is the measured transmittances/ 6 mm at 
+the range (110 - 950)~\,nm, peaked approximately at 160~\,nm. The window of the light source faced a vacuum space pumped to below $10^{-4}$ Torr. 
+The monochromator allows to select the desired wavelengths using a manually rotatable holographic diffraction grating. A PMT placed
+in the vacuum measured the intensity of light emitted from the monochromator, with and without the fused silica sample. The ratio of 
+measured intensities was used to calculate the transmittance of the material. In fig.~\ref{fig:transmittance} is the measured transmittances/ 6 mm at 
 (150 - 215)~\,nm. At 175~\,nm the sample shows approximately 90\%/6mm measured transmittance which corresponds to an intrinsic transmittance of about 98\%.  
 
 \begin{figure}
@@ -169,7 +180,8 @@ tubes with an active area of 20.5 mm $\times$ 20.5 mm each. We pick PMTs with a 
 at 178 nm. For an applied voltage of 900 V the gain of these PMTs are ~ 2 $\times$ 10$^6$. We use a positive 
 voltage divider, also manufactured by Hamamatsu, to provide high voltage to the PMTs.
 These 20 PMTs are held with a special aluminum holder, coated with anti-reflection substance. The holder is made of two hemispheres hosting the PMTs in 
-3 rows all of them pointing to the center of the fused-silica sphere. the PMTs are held only via their voltage--divider bases. The bases are held using M2 PEEK screws. 
+3 rows all of them pointing to the center of the fused-silica sphere. the PMTs are held only via their voltage--divider bases. 
+The bases are held using M2 PEEK screws. 
 In Fig.~\ref{fig:pmtholder}, one of the holder--hemispheres with the PMTs are shown.
 
 \begin{figure}
