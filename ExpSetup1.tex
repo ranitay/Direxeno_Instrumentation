@@ -7,9 +7,11 @@
 %Comment: The detector section has been modified. MMdevi's changes are made in blue
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The experimental setup that is described in this section, is designed to measure, the spatial and \RanComment{temporal (I think there is a better way to say it)} properties of LXe scintillation. However it is designed in a modular way, so it can serve different requirements from different future experiments. 
-There are four main building blocks constructing the full setup, The gas handling system, the cryogenic system, the detector system, and the data acquisition (DAQ) system. Each building block can be replaced without effecting the others. The full assembly 
-(figure.~\ref{fig:fulldet}) is held on three separate wracks, one for the DAQ, while the two others hold the cryogenic detector and gas handling system are joined using a 100mm bar with shock absorbers on both sides. Some of the guidelines for the design of DIREXENO is based on~\cite{Giboni}  
+The experimental setup that is described in this section, is designed to measure, the spatial and temporal properties of LXe scintillation. However it is designed in a modular way, so it can serve different requirements from different future experiments. 
+
+There are four main building blocks constructing the full setup, a schematics of them with the interfaces connecting them is shown in Fig.~\ref{fig:fullschematics}. The gas handling system, which, in normal working mode, drives the xenon from the detector trough a purifier and back into the detector. The cryogenic system, which liquefies the xenon and delivers it to the detector part. The detector system, mainly an HPFS sphere with a small bubble of LXe inside it surronded with PMTs. Finally the data acquisition (DAQ) system that supplies HV and reads the data from all sensors (e.g., PMTs, pressure gauge etc.). Each building block can be replaced without effecting the others. 
+
+The full assembly (Fig.~\ref{fig:fulldet}) is held on three separate wracks, one for the DAQ, while the two others hold the cryogenic detector and gas handling system are joined using a 100mm bar with shock absorbers on both sides. Some of the guidelines for the design of DIREXENO are based on~\cite{Giboni}  
 
 \begin{figure}[t!]
 \centerline{\includegraphics[width=1.\linewidth]{FullDet.jpg}}
@@ -37,7 +39,7 @@ liquefied before it continuous back to the chamber. A schematic of this system i
 
 
 \begin{figure}[t!]
-\centerline{\includegraphics[width=1.\linewidth]{GasSchematics.png}}
+\centerline{\includegraphics[width=1.\linewidth]{GasSchematics.pdf}}
 \caption{Schematics of the purification system. High pressure valves are indicated as valves with arcs. Needle valves are indicated as 
 a valve with an arrow.}
 \label{fig:gasSchematic}
