@@ -1,0 +1,77 @@
+\begin{thebibliography}{10}
+
+\bibitem{Aprile:2009dv}
+E.~Aprile and T.~Doke.
+\newblock {Liquid Xenon Detectors for Particle Physics and Astrophysics}.
+\newblock {\em Rev. Mod. Phys.}, 82:2053--2097, 2010.
+
+\bibitem{Rubbia:2013tpa}
+A.~Rubbia.
+\newblock {Future liquid Argon detectors}.
+\newblock 2013.
+\newblock [Nucl. Phys. Proc. Suppl.235-236,190(2013)].
+
+\bibitem{Bertone:2010zza}
+J.~Silk et~al.
+\newblock {\em {Particle Dark Matter: Observations, Models and Searches}}.
+\newblock Cambridge Univ. Press, Cambridge, 2010.
+
+\bibitem{Aprile:2017iyp}
+E.~Aprile et~al.
+\newblock {First Dark Matter Search Results from the XENON1T Experiment}.
+\newblock 2017.
+
+\bibitem{Akerib:2016vxi}
+D.~S. Akerib et~al.
+\newblock {Results from a search for dark matter in the complete LUX exposure}.
+\newblock {\em Phys. Rev. Lett.}, 118(2):021303, 2017.
+
+\bibitem{Fu:2016ega}
+Changbo Fu et~al.
+\newblock {Spin-Dependent Weakly-Interacting-Massive-Particle–Nucleon Cross
+  Section Limits from First Data of PandaX-II Experiment}.
+\newblock {\em Phys. Rev. Lett.}, 118(7):071301, 2017.
+
+\bibitem{Aalbers:2016jon}
+J.~Aalbers et~al.
+\newblock {DARWIN: towards the ultimate dark matter detector}.
+\newblock {\em JCAP}, 1611:017, 2016.
+
+\bibitem{DickeSR}
+R.~H. Dicke.
+\newblock Coherence in spontaneous radiation processes.
+\newblock {\em Phys. Rev.}, 93:99--110, Jan 1954.
+
+\bibitem{GROSS1982301}
+M.~Gross and S.~Haroche.
+\newblock Superradiance: An essay on the theory of collective spontaneous
+  emission.
+\newblock {\em Physics Reports}, 93(5):301 -- 396, 1982.
+
+\bibitem{BasovSRTheory}
+N~G Basov, V~A Danilychev, and Yurii~M Popov.
+\newblock Stimulated emission in the vacuum ultraviolet region.
+\newblock {\em Soviet Journal of Quantum Electronics}, 1(1):18, 1971.
+
+\bibitem{MiesSRExp}
+Frederick~H. Mies.
+\newblock Stimulated emission and population inversion in diatomic
+  bound-continuum transitions.
+\newblock {\em Molecular Physics}, 26(5):1233--1246, 1973.
+
+\bibitem{Giboni}
+K~L Giboni, X~Ji, H~Lin, A~Tan, T~Ye, Y~Zhang, and L~Zhao.
+\newblock A liquid xenon development and test system.
+\newblock {\em Journal of Instrumentation}, 9(04):T04006, 2014.
+
+\bibitem{xe100_instr2012}
+E.~Aprile et~al.
+\newblock {The XENON100 Dark Matter Experiment}.
+\newblock {\em Astropart. Phys.}, 35:573--590, 2012.
+
+\bibitem{Agostinelli:2002hh}
+S.~Agostinelli et~al.
+\newblock {GEANT4: A Simulation toolkit}.
+\newblock {\em Nucl. Instrum. Meth.}, A506:250--303, 2003.
+
+\end{thebibliography}

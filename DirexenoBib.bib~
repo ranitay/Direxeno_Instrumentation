@@ -1,0 +1,201 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Physics theory %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+@book{Bertone:2010zza,
+      author         = "J. Silk and others",
+      title          = "{Particle Dark Matter: Observations, Models and
+                        Searches}",
+      publisher      = "Cambridge Univ. Press",
+      address        = "Cambridge",
+      year           = "2010",
+      doi            = "10.1017/CBO9780511770739",
+      ISBN           = "9781107653924",
+      SLACcitation   = "%%CITATION = INSPIRE-895273;%%"
+}
+
+
+@article{BasovSRTheory,
+  author={N G Basov and V A Danilychev and Yurii M Popov},
+  title={Stimulated emission in the vacuum ultraviolet region},
+  journal={Soviet Journal of Quantum Electronics},
+  volume={1},
+  number={1},
+  pages={18},
+  url={http://stacks.iop.org/0049-1748/1/i=1/a=A03},
+  year={1971},
+  
+}
+
+@article{MiesSRExp,
+author = { Frederick H.   Mies },
+title = {Stimulated emission and population inversion in diatomic bound-continuum transitions},
+journal = {Molecular Physics},
+volume = {26},
+number = {5},
+pages = {1233-1246},
+year = {1973},
+doi = {10.1080/00268977300102431}
+}
+
+@article{GROSS1982301,
+title = "Superradiance: An essay on the theory of collective spontaneous emission",
+journal = "Physics Reports",
+volume = "93",
+number = "5",
+pages = "301 - 396",
+year = "1982",
+note = "",
+issn = "0370-1573",
+doi = "http://dx.doi.org/10.1016/0370-1573(82)90102-8",
+url = "http://www.sciencedirect.com/science/article/pii/0370157382901028",
+author = "M. Gross and S. Haroche",
+
+}
+
+@article{DickeSR,
+  title = {Coherence in Spontaneous Radiation Processes},
+  author = {Dicke, R. H.},
+  journal = {Phys. Rev.},
+  volume = {93},
+  issue = {1},
+  pages = {99--110},
+  numpages = {0},
+  year = {1954},
+  month = {Jan},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRev.93.99},
+  url = {http://link.aps.org/doi/10.1103/PhysRev.93.99}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Detectors papers
+
+@article{Rubbia:2013tpa,
+      author         = "Rubbia, A.",
+      title          = "{Future liquid Argon detectors}",
+      booktitle      = "{Proceedings, 25th International Conference on Neutrino
+                        Physics and Astrophysics (Neutrino 2012): Kyoto, Japan,
+                        June 4-9, 2012}",
+      year           = "2013",
+      doi            = "10.1016/j.nuclphysbps.2013.04.010",
+      note           = "[Nucl. Phys. Proc. Suppl.235-236,190(2013)]",
+      eprint         = "1304.0127",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      SLACcitation   = "%%CITATION = ARXIV:1304.0127;%%"
+}
+
+@article{Aprile:2009dv,
+      author         = "Aprile, E. and Doke, T.",
+      title          = "{Liquid Xenon Detectors for Particle Physics and
+                        Astrophysics}",
+      journal        = "Rev. Mod. Phys.",
+      volume         = "82",
+      year           = "2010",
+      pages          = "2053-2097",
+      doi            = "10.1103/RevModPhys.82.2053",
+      eprint         = "0910.4956",
+      archivePrefix  = "arXiv",
+      primaryClass   = "physics.ins-det",
+      SLACcitation   = "%%CITATION = ARXIV:0910.4956;%%"
+}
+
+@article{Aprile:2017iyp,
+      author         = "Aprile, E. and others",
+      title          = "{First Dark Matter Search Results from the XENON1T
+                        Experiment}",
+      collaboration  = "XENON",
+      year           = "2017",
+      eprint         = "1705.06655",
+      archivePrefix  = "arXiv",
+      primaryClass   = "astro-ph.CO",
+      SLACcitation   = "%%CITATION = ARXIV:1705.06655;%%"
+}
+
+@article{Akerib:2016vxi,
+      author         = "Akerib, D. S. and others",
+      title          = "{Results from a search for dark matter in the complete
+                        LUX exposure}",
+      collaboration  = "LUX",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "118",
+      year           = "2017",
+      number         = "2",
+      pages          = "021303",
+      doi            = "10.1103/PhysRevLett.118.021303",
+      eprint         = "1608.07648",
+      archivePrefix  = "arXiv",
+      primaryClass   = "astro-ph.CO",
+      SLACcitation   = "%%CITATION = ARXIV:1608.07648;%%"
+}
+
+@article{Fu:2016ega,
+      author         = "Fu, Changbo and others",
+      title          = "{Spin-Dependent
+                        Weakly-Interacting-Massive-Particle–Nucleon Cross
+                        Section Limits from First Data of PandaX-II Experiment}",
+      collaboration  = "PandaX-II",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "118",
+      year           = "2017",
+      number         = "7",
+      pages          = "071301",
+      doi            = "10.1103/PhysRevLett.118.071301",
+      eprint         = "1611.06553",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      SLACcitation   = "%%CITATION = ARXIV:1611.06553;%%"
+}
+
+@article{Aalbers:2016jon,
+      author         = "Aalbers, J. and others",
+      title          = "{DARWIN: towards the ultimate dark matter detector}",
+      collaboration  = "DARWIN",
+      journal        = "JCAP",
+      volume         = "1611",
+      year           = "2016",
+      pages          = "017",
+      doi            = "10.1088/1475-7516/2016/11/017",
+      eprint         = "1606.07001",
+      archivePrefix  = "arXiv",
+      primaryClass   = "astro-ph.IM",
+      SLACcitation   = "%%CITATION = ARXIV:1606.07001;%%"
+}
+
+  	
+@article{Giboni,
+  author={K L Giboni and X Ji and H Lin and A Tan and T Ye and Y Zhang and L Zhao},
+  title={A liquid xenon development and test system},
+  journal={Journal of Instrumentation},
+  volume={9},
+  number={04},
+  pages={T04006},
+  url={http://stacks.iop.org/1748-0221/9/i=04/a=T04006},
+  year={2014}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@article{AGOSTINELLI2003250,
+title = "Geant4—a simulation toolkit",
+journal = "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
+volume = "506",
+number = "3",
+pages = "250 - 303",
+year = "2003",
+note = "",
+issn = "0168-9002",
+doi = "http://dx.doi.org/10.1016/S0168-9002(03)01368-8",
+author = "S. Agostinelli and J. Allison and K. Amako and J. Apostolakis and H. Araujo and P. Arce and M. Asai and D. Axen and S. Banerjee and G. Barrand and F. Behner and L. Bellagamba and J. Boudreau and L. Broglia and A. Brunengo and H. Burkhardt and S. Chauvie and J. Chuma and R. Chytracek and G. Cooperman and G. Cosmo and P. Degtyarenko and A. Dell'Acqua and G. Depaola and D. Dietrich and R. Enami and A. Feliciello and C. Ferguson and H. Fesefeldt and G. Folger and F. Foppiano and A. Forti and S. Garelli and S. Giani and R. Giannitrapani and D. Gibin and J.J. Gómez Cadenas and I. González and G. Gracia Abril and G. Greeniaus and W. Greiner and V. Grichine and A. Grossheim and S. Guatelli and P. Gumplinger and R. Hamatsu and K. Hashimoto and H. Hasui and A. Heikkinen and A. Howard and V. Ivanchenko and A. Johnson and F.W. Jones and J. Kallenbach and N. Kanaya and M. Kawabata and Y. Kawabata and M. Kawaguti and S. Kelner and P. Kent and A. Kimura and T. Kodama and R. Kokoulin and M. Kossov and H. Kurashige and E. Lamanna and T. Lampén and V. Lara and V. Lefebure and F. Lei and M. Liendl and W. Lockman and F. Longo and S. Magni and M. Maire and E. Medernach and K. Minamimoto and P. Mora de Freitas and Y. Morita and K. Murakami and M. Nagamatu and R. Nartallo and P. Nieminen and T. Nishimura and K. Ohtsubo and M. Okamura and S. O'Neale and Y. Oohata and K. Paech and J. Perl and A. Pfeiffer and M.G. Pia and F. Ranjard and A. Rybin and S. Sadilov and E. Di Salvo and G. Santin and T. Sasaki and N. Savvas and Y. Sawada and S. Scherer and S. Sei and V. Sirotenko and D. Smith and N. Starkov and H. Stoecker and J. Sulkimo and M. Takahata and S. Tanaka and E. Tcherniaev and E. Safai Tehrani and M. Tropeano and P. Truscott and H. Uno and L. Urban and P. Urban and M. Verderi and A. Walkden and W. Wander and H. Weber and J.P. Wellisch and T. Wenaus and D.C. Williams and D. Wright and T. Yamada and H. Yoshida and D. Zschiesche",
+}
+
+@article{xe100_instr2012,
+      author         = "Aprile, E. and others",
+      title          = "{The XENON100 Dark Matter Experiment}",
+      collaboration  = "XENON100",
+      journal        = "Astropart. Phys.",
+      volume         = "35",
+      year           = "2012",
+      pages          = "573-590",
+      doi            = "10.1016/j.astropartphys.2012.01.003",
+      eprint         = "1107.2155",
+      archivePrefix  = "arXiv",
+      primaryClass   = "astro-ph.IM",
+      SLACcitation   = "%%CITATION = ARXIV:1107.2155;%%"
+}
