@@ -13,21 +13,20 @@ the VME controller module V2718 and a PCIe card A3818.
 
 The schematic layout 
 of the DAQ system is shown in Fig.~{\ref{Fig:DAQscheme}}. All the 20 PMTs 
-are oriented in the holder assembly which was discussed in section---. 
+are oriented in the holder assembly which was discussed in section \ref{subsubsec:sphere}. 
 The PMTs are ramped up to +800V (the maximum is +900V) using a 24 channel 
-VME high volatge distributor module (VDS18130p) from iseg. \sout{The voltage is 
-monitored by the GUI based control software provided by iseg}. 
-\sout{For clarity in understanding,} we define the raw electrical pulse output of the PMTs as S{\it i} (raw), where {\it i} = 1 -- 20. These raw pulses are then 
-amplified and shaped using two NIM photomultiplier preamplifiers (Phillips 776). 
+VME high volatge distributor module \footnote{iseg VDS18130p}.  
+We define the raw electrical pulse output of the PMTs as S{\it i} (raw), where {\it i} = 1 -- 20. 
+These raw pulses are then 
+amplified and shaped using two photomultiplier preamplifiers \footnote{Phillips 776. 
 Each of the preamplifier model provides 16 independent  and direct-coupled 
-amplifiers channels. The preamplifier channels operates from DC to 275 MHz and 
+amplifiers channels}. The preamplifier channels operates from DC to 275 MHz and 
 produce two identical 50 $\Omega$ non inverting outputs with voltage gains of 10. 
-We \sout{term} \RanComment{define} the amplified pulses as S{\it i}, ({\it i} = 1 -- 20). One of the 
-two identical analog outputs from each channel is \RanComment{ What is this word ereingconverted} to a digital 
-signal with an Analog to Digitizer converter (ADC V1742). 
+We define the amplified pulses as S{\it i}, ({\it i} = 1 -- 20). One out of the 
+two identical analog outputs from each channel is converted to a digital 
+signal with an Analog to Digitizer converter \footnote{CAEN ADC V1742: Switched capacitor Digitizer}. 
 
-The ADC module V1742 
-is a VME board with two 12bit 5GS/s Switched capacitor Digitizer sections, 
+The ADC consists of two 12bit 5GS/s Switched capacitor Digitizer sections, 
 each of them with 16+1 channels, based on DRS4 chip. The dynamic range of the input 
 signal is 1 Vpp with adjustable DC offset. This module can sample either bipolar or 
 unipolar analog input signal within the dynamic range in a circular 
@@ -39,13 +38,13 @@ with a 12 bit resolution.
 We generate an intrinsic trigger for the system, 
 with the coincidence of any two out of the twenty PMTs. The second output from the 
 preamplifier channels are converted to binary signals using two 16 channel leading 
-Edge discriminator (V895). In Fig.~\ref{Fig:DAQscheme}, we term the binary 
-outputs from V895 as SD{\it i}, i= 1 -- 20. The SD{\it i} signals are then passed over to 
-v1495, an FPGA based General purpose VME board which is programmed to perform the 
-logic operation to obtain the trigger. At present, the coincidence of any two out 
-of the twenty PMTs forms the trigger logic. The output of V1495 logic operation is 
-used to trigger the ADC V1742 module. In order to record the PMT noise rate, the 
-SD{\it i} signals are duplicated and fed to a scaler V830.
+Edge discriminator \footnote{CAEN V895}. In Fig.~\ref{Fig:DAQscheme}, we term the binary 
+outputs from the discriminator as SD{\it i}, i= 1 -- 20. The SD{\it i} signals are then passed over to 
+the logic module \footnote{CAEN V1495, an FPGA based General purpose VME board which is programmed to perform the 
+logic operation} to obtain the trigger. At present, the coincidence of any two out 
+of the twenty PMTs forms the trigger logic. The output of the logic operation is 
+used to trigger the ADC. In order to record the PMT noise rate, the 
+SD{\it i} signals are duplicated and fed to a scaler \footnote{CAEN V830}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
