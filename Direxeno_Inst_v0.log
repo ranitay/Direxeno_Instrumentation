@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.5.23)  28 JUN 2017 10:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.5.23)  28 JUN 2017 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1007,35 +1007,41 @@ File: detReal_small.jpg Graphic file (type jpg)
 <use detReal_small.jpg>
 Package pdftex.def Info: detReal_small.jpg used on input line 225.
 (pdftex.def)             Requested size: 193.58997pt x 191.7785pt.
-) (./DAQ.tex [8 <./PMTholder.JPG> <./detCAD.png> <./detReal_small.jpg>]
-LaTeX Font Info:    Font shape `T1/ntxrx/m/it' will be
-(Font)              scaled to size 10.95pt on input line 19.
-
+) (./DAQ.tex
 
 pdfTeX warning: /usr/bin/pdflatex (file ./DAQscheme.pdf): PDF inclusion: found 
 PDF version <1.5>, but at most version <1.4> allowed
-<DAQscheme.pdf, id=289, 722.7pt x 542.025pt>
+<DAQscheme.pdf, id=274, 722.7pt x 542.025pt>
 File: DAQscheme.pdf Graphic file (type pdf)
  <use DAQscheme.pdf>
-Package pdftex.def Info: DAQscheme.pdf used on input line 53.
-(pdftex.def)             Requested size: 430.20639pt x 322.65361pt.
- [9] [10 <./DAQscheme.pdf>]) (./simulation.tex [11
+Package pdftex.def Info: DAQscheme.pdf used on input line 16.
+(pdftex.def)             Requested size: 344.16641pt x 258.12619pt.
+LaTeX Font Info:    Font shape `T1/ntxrx/m/it' will be
+(Font)              scaled to size 10.95pt on input line 30.
+ [8 <./PMTholder.JPG> <./detCAD.png> <./detReal_small.jpg>] [9 <./DAQscheme.pdf
+>])
+(./simulation.tex
 
-] <pdr.png, id=327, 971.63pt x 649.42625pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10] <pdr.png, id=322, 971.63pt x 649.42625pt>
 File: pdr.png Graphic file (type png)
-
-<use pdr.png>
+ <use pdr.png>
 Package pdftex.def Info: pdr.png used on input line 67.
 (pdftex.def)             Requested size: 215.1032pt x 143.76607pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) (./summary.tex) (./Direxeno_Inst_v0.bbl
 LaTeX Font Info:    Font shape `T1/ntxrx/m/it' will be
 (Font)              scaled to size 10.0pt on input line 6.
- [12 <./pdr.png>])
+ [11 <./pdr.png>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
-
-[13]
+ [12]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
- (./Direxeno_Inst_v0.aux)
+
+(./Direxeno_Inst_v0.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
 Package rerunfilecheck Info: File `Direxeno_Inst_v0.out' has not changed.
@@ -1048,9 +1054,9 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
  ) 
 Here is how much of TeX's memory you used:
  9910 strings out of 493304
- 143558 string characters out of 6139871
- 229773 words of memory out of 5000000
- 13044 multiletter control sequences out of 15000+600000
+ 143564 string characters out of 6139871
+ 230778 words of memory out of 5000000
+ 13045 multiletter control sequences out of 15000+600000
  90715 words of font info for 140 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,15n,65p,733b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1066,9 +1072,9 @@ usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on Direxeno_Inst_v0.pdf (14 pages, 3338790 bytes).
+Output written on Direxeno_Inst_v0.pdf (13 pages, 3337726 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
+ 395 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
 
