@@ -28,21 +28,49 @@ detect scintillation from LXe are 1'' and 3'' square PMTs, and we choose the 1' 
 to get better spatial resolution. an array of 20 PMTs around the sphere, placed at a distance of 
 39 mm from the centre of the targetare considered. The active area of each PMT is 22 mm $\times$ 22 mm.
 
+\begin{table}[h]
+  \centering
+  \caption{The optical parameters used in simulation}
+  \label{tab:OptPar}
+  \begin{tabular}{|c|c|}
+  \hline
+  Parameter & Value\\
+  \hline
+  LXe absorption length & 100 cm\\
+  \hline
+  LXe scattering length & 35 cm\\
+  \hline
+  HPFS absorption length & 100 cm\\
+  \hline
+  HPFS scattering length & $\infty$ \\
+  \hline
+  LXe refractive index & 1.61 \\
+  \hline
+  HPFS refractive index & 1.57 \\
+  \hline
+  \end{tabular}
+\end{table}
+
 In order to chose a reasonable dimension of the sphere, we first study the detection efficiency of 
 scintillated photons in the simulated setup. Using an inotropic emmision of 50photons/event, we find 
 the average ratio of the detected photons/event to the net emitted photons/event, for various choices 
 of $R_{2}$. The trasmittance of HPFS is a crucial parameter and we vary it within a large range to 
 check the impact of it. The photon detection ratio for different sets of $R_{2}$ and transmittance are 
-shown in Fig.~\ref{fig:pdr}. 
-
+shown in Fig.~\ref{fig:pdr}.  At very low R$_{2}$ the total internal reflections causes the number of photons emerging from 
+the sphere to drop. As the R$_{2}$ increases the total internal reflections decreases resulting in an 
+increase in the number of photons croosing the sphere. After certain increase in R$_{2}$, the transmittance 
+of HPFS becomes the dominant factor and the photon detection ratio starts falling. This is an important factor 
+to chose a suitable value of R$_{2}$.
 
 \begin{figure}
    \centering
-   \includegraphics[width=0.8\textwidth]{pdr.png}
+   \includegraphics[width=0.5\textwidth]{pdr.png}
    \caption{The photon detection ratio as a function of R$_{2}$, for different transmittances of 
    the fused silica shell. We use 10$^4$ events with 50 photons/event for each choice of transmittance 
-   and R$_{2}$}. %At very low R$_{2}$, the complete internal reflections causes the detection ratio 
-   %to rise. As the R$_{2}$ increases, the transmittance of the HPFS shell becomes dominant, and the ratio
+   and R$_{2}$. At very low R$_{2}$ the total internal reflections causes the number of photons emerging from 
+   the sphere to drop. As the R$_{2}$ increases the total internal reflections decreases resulting in an 
+   increase in the number of photons croosing the sphere. After certain increase in R$_{2}$, the transmittance 
+   of HPFS becomes the dominant factor and the photon detection ratio starts falling.}
    %drops.
    \label{fig:pdr}
 \end{figure}
@@ -50,3 +78,30 @@ shown in Fig.~\ref{fig:pdr}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The statistical test}
 \label{subsec:StatAnalysis}
+In this section, we present the study on the ability of the proposed detector to detect the emission pattern 
+of the LXe scintillation with a high statistical significance. For each scintillation event, the PMTs 
+will detect only a certain fraction of the total photons produced. We pick a few cases of emission 
+patterns as shown in Table~\ref{tab:emissionpattern},
+
+\begin{table}[h]
+  \centering
+  \caption{The emission patterns used in simulation}
+  \label{tab:emissionpattern}
+  \begin{tabular}{|c|c|c|c|}
+  \hline
+  Pattern no. & Beam specification & Beam Half widths & Signal fractions\\
+  \hline
+  LXe absorption length & 100 cm\\
+  \hline
+  LXe scattering length & 35 cm\\
+  \hline
+  HPFS absorption length & 100 cm\\
+  \hline
+  HPFS scattering length & $\infty$ \\
+  \hline
+  LXe refractive index & 1.61 \\
+  \hline
+  HPFS refractive index & 1.57 \\
+  \hline
+  \end{tabular}
+\end{table}

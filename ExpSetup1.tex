@@ -18,8 +18,8 @@ inside it surronded with PMTs. Finally the data acquisition (DAQ) system that su
 sensors (e.g., PMTs, pressure gauge etc.). Each building block can be replaced without effecting the others. 
 
 \begin{figure}[t!]
-\centerline{\includegraphics[width=1.\linewidth]{WholeSys.png}}
-\caption{DIREXENO. On the left the purification system, in the middle the cryogenic and detector chamber, and on th right the Data acquisition system.}
+\centerline{\includegraphics[width=0.8\linewidth]{WholeSys.png}}
+\caption{A schematic of DIREXENO showing all the four building blocks of the system.}
 \label{fig:fullschematics}
 \end{figure}
 
@@ -28,7 +28,7 @@ the cryogenic detector and gas handling system are joined using a 100mm bar with
 the guidelines for the design of DIREXENO are based on~\cite{Giboni}  
 
 \begin{figure}[t!]
-\centerline{\includegraphics[width=1.\linewidth]{FullDet.jpg}}
+\centerline{\includegraphics[width=0.8\linewidth]{FullDet.jpg}}
 \caption{DIREXENO. On the left the purification system, in the middle the cryogenic and detector chamber, and on th right the Data acquisition system.}
 \label{fig:fulldet}
 \end{figure}
@@ -59,7 +59,7 @@ a valve with an arrow.}
 \label{fig:gasSchematic}
 \end{figure}
 
-\subsection{The Cryogenic system}
+\subsection{Cryogenic system}
 \label{subsec:cryo}
 
 Remote cooling is generally used in DM experiments due to background radiating from the cooler to the detector. Although in our system 
@@ -151,9 +151,10 @@ wavelengths which are relevant to us. %and the transmittance 99.8\%/cm at 175 nm
 
 \begin{figure}
    \centering
-   \includegraphics[width=0.8\textwidth]{RI-calibration.pdf}
-   \caption{The refaractive indices of HPFS 8655 at various wavelengths. (Top) The values provided from Corning factsheet.
-   (Bottom) The values extrapolated at lower wavelengths.} 
+   \includegraphics[width=0.48\textwidth]{RI-calibration.pdf}
+    \includegraphics[width=0.48\textwidth]{IntTransmittance.pdf}
+   \caption{The important characteristics of HPFS-8655. (Left) The refractive index as provided by corning and 
+   extrapolated to relevant wavelength range. (Right) The internal transmittance ($T_{i}$).} 
    \label{fig:hpfsRIcalibration}
 \end{figure}
 
@@ -166,12 +167,7 @@ in the vacuum measured the intensity of light emitted from the monochromator, wi
 measured intensities was used to calculate the transmittance of the material. In fig.~\ref{fig:transmittance} is the measured transmittances/ 6 mm at 
 (150 - 215)~\,nm. At 175~\,nm the sample shows approximately 90\%/6mm measured transmittance which corresponds to an intrinsic transmittance of about 98\%.  
 
-\begin{figure}
-   \centering
-   \includegraphics[width=0.6\textwidth]{ObservedTransmittance1.pdf}
-   \caption{The transmittance of a 6 mm thick HPFS 8655 sample.} 
-   \label{fig:transmittance}
-\end{figure}
+
 
 The dimension of the fused silica shell is optimized by studying the path of the scintillation photons using a GEANT4 based simulation~\cite{Agostinelli:2002hh}. 
 The sources that will be used for exciting the xenon, and creating the supperradiance (signal) as well as the standard emission (background), 
@@ -179,17 +175,23 @@ will be $^{137} \mathrm{Cs}$ (662 keV) and $^{57} \mathrm{Co}$(122keV \& 136 keV
 produced in an accelerator for NR . The mean free path for this energy is a couple of mm ($^{57} \mathrm{Co}$) and (0.5 - 3) cm ($^{137} Cs$).  
 We discuss the simulation in detail in section~\ref{sec:sim}. 
 The outer radius of the shell is 3 cm, while the inner radius of the hollow space that will hold the 
-LXe is 1 cm. The flow of the LXe will be maintained by two invar tubes. This shell--system, \sout{as} \RanComment{is} shown 
-in Fig.~\ref{fig:sphere} \sout{is being manufactured industrially as par the specification provided by us.}
+LXe is 1 cm. The flow of the LXe will be maintained by two invar tubes. In Fig.~\ref{fig:sphere} we show 
+the technical design and a picture of the industrially manufactured shell assebmly. 
+
+
+
 
 \begin{figure}
-   \centering
-   \includegraphics[width=0.7\textwidth]{spheredesign1.png}
-   
-   \vspace{0.2cm}
-   \includegraphics[width=0.7\textwidth]{spherephoto.png}
-   \caption{The technical scheme of the HPFS shell with invar tubing and flanges.} 
-   \label{fig:sphere}
+\centering
+\begin{subfigure}[c]{0.4\textheight}
+\includegraphics[width=\textwidth]{spheredesign1.png}
+\end{subfigure}
+\begin{subfigure}[c]{0.25\textheight}
+\includegraphics[width=\textwidth]{spherephoto.png}
+\end{subfigure}
+\caption{The technical design of the HPFS shell with invar tubing and flanges (left). The industrially manufactured
+HPFS shell (right).} 
+\label{fig:sphere}
 \end{figure}
 
 
@@ -204,7 +206,7 @@ In Fig.~\ref{fig:pmtholder}, one of the holder--hemispheres with the PMTs are sh
 
 \begin{figure}
    \centering
-   \includegraphics[width=0.6\textwidth]{PMTholder.JPG}
+   \includegraphics[width=0.5\textwidth]{PMTholder.JPG}
    \caption{A PMT holder--hemisphere. We use two such components to hold 20 PMTS around the target.} 
    \label{fig:pmtholder}
 \end{figure}
