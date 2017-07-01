@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.5.23)  28 JUN 2017 10:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.4.23)  28 JUN 2017 14:16
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **Direxeno_Inst_v0.tex
 (./Direxeno_Inst_v0.tex
@@ -932,8 +932,8 @@ LaTeX Font Info:    Font shape `T1/ntxr1/m/n' will be
 (Font)              scaled to size 9.0pt on input line 46.
  [3 <./WholeSys.png> <./FullDet.jpg>]
 
-pdfTeX warning: /usr/bin/pdflatex (file ./GasSchematics.pdf): PDF inclusion: fo
-und PDF version <1.5>, but at most version <1.4> allowed
+pdfTeX warning: pdflatex (file ./GasSchematics.pdf): PDF inclusion: found PDF v
+ersion <1.5>, but at most version <1.4> allowed
 <GasSchematics.pdf, id=129, 722.7pt x 542.025pt>
 File: GasSchematics.pdf Graphic file (type pdf)
  <use GasSchematics.pdf>
@@ -1012,8 +1012,8 @@ LaTeX Font Info:    Font shape `T1/ntxrx/m/it' will be
 (Font)              scaled to size 10.95pt on input line 19.
 
 
-pdfTeX warning: /usr/bin/pdflatex (file ./DAQscheme.pdf): PDF inclusion: found 
-PDF version <1.5>, but at most version <1.4> allowed
+pdfTeX warning: pdflatex (file ./DAQscheme.pdf): PDF inclusion: found PDF versi
+on <1.5>, but at most version <1.4> allowed
 <DAQscheme.pdf, id=289, 722.7pt x 542.025pt>
 File: DAQscheme.pdf Graphic file (type pdf)
  <use DAQscheme.pdf>
