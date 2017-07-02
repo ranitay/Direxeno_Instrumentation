@@ -1,4 +1,4 @@
-\section{The Data Acquisition (DAQ) System }
+\section{The DAQ System }
 \label{sec:DAQ}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -16,11 +16,11 @@ The raw electrical pulse output of the PMTs are denoted as S{\it i}(raw), where 
 These raw pulses are then amplified and shaped using two photomultiplier preamplifiers 
 \footnote{Phillips 776. 16 independent and direct-coupled amplifiers channels}. 
 The preamplifier channels operates from DC to 275 MHz and produce two identical 
-50 $\Omega$ non inverting fifo outputs with voltage gains of 10. 
+50 $\Omega$ non inverting FIFO outputs with voltage gains of 10. 
 The amplified pulses are denoted as S{\it i} 
 [\RanComment{Isn't this the same notation as the raw data?} \mmd{raw: S{\it i}(raw), amplified: S{\it i}. 
-I specifically wan to include 'raw' in the terms and a super/sub script would be unreadable in the schematic}], 
-({\it i} = 1 -- 20). One of the two fifo outputs from each channel is converted to a 
+I specifically want to include 'raw' in the terms and a super/sub script would be unreadable in the schematic}], 
+({\it i} = 1 -- 20). One of the two FIFO outputs from each channel is converted to a 
 digital signal with an Analog to Digitizer converter \footnote{CAEN ADC V1742: Switched capacitor Digitizer}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,7 +39,7 @@ The schematic layout
 of the DAQ system is shown in Fig.~{\ref{Fig:DAQscheme}}. All the 20 PMTs 
 are oriented in the holder assembly which was discussed in section \ref{subsubsec:sphere}. 
 The PMTs are ramped up to +800V (the maximum is +900V) using a 24 channel 
-VME high volatge distributor module \footnote{iseg VDS18130p : 24 independent chanels with positive polarity}.  
+VME high voltage distributor module \footnote{iseg VDS18130p : 24 independent channels with positive polarity}.  
 The raw electrical pulse output of the PMTs are defined as S{\it i} (raw), where {\it i} = 1 -- 20. 
 These raw pulses are then 
 amplified and shaped using two photomultiplier preamplifiers \footnote{Phillips 776: 16 independent  and direct-coupled 
