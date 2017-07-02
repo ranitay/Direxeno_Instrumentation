@@ -1,107 +1,54 @@
-\section{Simulation}
+\section{Simulation \mmd{in progress}}
 \label{sec:sim}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In this section we present the Monte Carlo simulation study that was performed to optimize the 
-geometry and performance of the LXe scintillation detection system. We perform a GEANT4 based 
-simulation to obtain the reasonable dimensions of the spherical LXe holder and the placement of 
-the PMT detectors around it, which is described in section \ref{subsec:DetGeometry}. In 
-section \ref{subsec:StatAnalysis}, we discuss the statistical test performed to find the 
-detector's sensitivity in measuring various patterns of the scintillation emission from 
-the LXe target.
+A GEANT4 based simulation of the detector is caried out which uses realistic optical parameters, 
+and takes into account the physics processes of the propagation of the photons produced in the LXe 
+and propagating to the PMTs via the HPFS sphere and vacuum. Assuming various pattern of the LXe 
+scintillation, the photons detected at the PMTs are mapped and put through a statistical test to 
+check the detector's sensitivity towards those patterns.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The Detector Geometry}
-\label{subsec:DetGeometry}
- We perform a study to optimize the dimensions of the setup using a GEANT4 based framework
- that includes realistic description of the  target, the enclosing HPFS sphere and the PMTs 
- around. The simulations takes into account the physics processes of the propagation of the photons 
- from the LXe  target through the the sphere and the vacuum and their interaction at the PMTs. 
- The parameters under test for this study are the size of the sphere, the PMT size and their 
- placement around the sphere. The refractive index and internal transmittance of both 
- of LXe and of HPFS are known with good precision. 
- 
- For the simulation, we fix all parameters except the outer radius ($R_{2}$) of the sphere. The fixed 
- parameter values are chosen by quantitative physical considerations and educated guesses.
-The radius of the LXe target $R_{1}$ will determine the event rate for a particular 
-source, and we choose it to  be 1 cm. The conventional PMTs designed by Hamamatsu to 
-detect scintillation from LXe are 1'' and 3'' square PMTs, and we choose the 1' ones in order 
-to get better spatial resolution. an array of 20 PMTs around the sphere, placed at a distance of 
-39 mm from the centre of the targetare considered. The active area of each PMT is 22 mm $\times$ 22 mm.
+The realistic dimension of the detector assembly has been used in the simulation. The important 
+geometrical and optical parameters used in the simulation are listed in Table~\ref{tab:OptPar}. 
+In the simulation 
+framework, The probability for a photon being transmitted/reflected at a given surface is 
+determined by Fresnel’s equations, which include Snell’s law for the transmitted light, 
+and specular reflection for the reflected light. The boundary surfaces between different media
+such as, the LXe--HPFS, HPFS--vacuum and vacuum--PMT, are considered to be perfectly smooth, 
+therefore enabling only specular reflection.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[h]
   \centering
-  \caption{The optical parameters used in simulation}
+  \caption{The parameters used in simulation}
   \label{tab:OptPar}
-  \begin{tabular}{|c|c|}
+  \begin{tabular}{|c c||c c|}
   \hline
-  Parameter & Value\\
+  Parameter & Value & Parameter & Value \\
   \hline
-  LXe absorption length & 100 cm\\
+  LXe absorption length & 100 cm & No. of PMT & 20\\
+  %\hline
+  LXe scattering length & 35 cm & PMT active area & 22mm $\times$ 22mm\\
+  %\hline
+  HPFS absorption length & 100 cm & PMT QE & $\geq$ 30\% \\
+ % \hline
+  HPFS scattering length & $\infty$ & PMT distance from centre & 39 mm\\
+ % \hline
+  LXe refractive index & 1.61 & LXe bubble radius & 1cm\\
+  %\hline
+  HPFS refractive index & 1.57 & HPFS shell thickness & 2 cm \\
+  Scintillation wavelength & 178 $\pm$ 14 nm & Invar tube diameter & 1 mm\\
   \hline
-  LXe scattering length & 35 cm\\
-  \hline
-  HPFS absorption length & 100 cm\\
-  \hline
-  HPFS scattering length & $\infty$ \\
-  \hline
-  LXe refractive index & 1.61 \\
-  \hline
-  HPFS refractive index & 1.57 \\
-  \hline
-  \end{tabular}
+ \end{tabular}
 \end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In order to chose a reasonable dimension of the sphere, we first study the detection efficiency of 
-scintillated photons in the simulated setup. Using an inotropic emmision of 50photons/event, we find 
-the average ratio of the detected photons/event to the net emitted photons/event, for various choices 
-of $R_{2}$. The trasmittance of HPFS is a crucial parameter and we vary it within a large range to 
-check the impact of it. The photon detection ratio for different sets of $R_{2}$ and transmittance are 
-shown in Fig.~\ref{fig:pdr}.  At very low R$_{2}$ the total internal reflections causes the number of photons emerging from 
-the sphere to drop. As the R$_{2}$ increases the total internal reflections decreases resulting in an 
-increase in the number of photons croosing the sphere. After certain increase in R$_{2}$, the transmittance 
-of HPFS becomes the dominant factor and the photon detection ratio starts falling. This is an important factor 
-to chose a suitable value of R$_{2}$.
+The photons reaching the PMTs can either be detected or absorbed or reflected from the photocathode 
+or the PMT window. In the simulation, a simplified approach of the above possibilities is considered -- 
+A photon on the PMT has 30\% probability to be detected (since QE $\geq$ 30\%), 50\% probability to get 
+absorbed and 20\% probability to get specularly reflected. As the scintillation light in a particular 
+event is emitted by a cloud of excited diatomic molecules, with a linear size much smaller than that 
+of the optical system, we simulate each event as a number of photons that are emitted from a point 
+in the LXe. The events are uniformly generated in the LXe volume to simulate an entirely radiated 
+target much smaller than the mean free path length of the source particles in LXe.
 
-\begin{figure}
-   \centering
-   \includegraphics[width=0.5\textwidth]{pdr.png}
-   \caption{The photon detection ratio as a function of R$_{2}$, for different transmittances of 
-   the fused silica shell. We use 10$^4$ events with 50 photons/event for each choice of transmittance 
-   and R$_{2}$. At very low R$_{2}$ the total internal reflections causes the number of photons emerging from 
-   the sphere to drop. As the R$_{2}$ increases the total internal reflections decreases resulting in an 
-   increase in the number of photons croosing the sphere. After certain increase in R$_{2}$, the transmittance 
-   of HPFS becomes the dominant factor and the photon detection ratio starts falling.}
-   %drops.
-   \label{fig:pdr}
-\end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The statistical test}
-\label{subsec:StatAnalysis}
-In this section, we present the study on the ability of the proposed detector to detect the emission pattern 
-of the LXe scintillation with a high statistical significance. For each scintillation event, the PMTs 
-will detect only a certain fraction of the total photons produced. We pick a few cases of emission 
-patterns as shown in Table~\ref{tab:emissionpattern},
-
-\begin{table}[h]
-  \centering
-  \caption{The emission patterns used in simulation}
-  \label{tab:emissionpattern}
-  \begin{tabular}{|c|c|c|c|}
-  \hline
-  Pattern no. & Beam specification & Beam Half widths & Signal fractions\\
-  \hline
-  LXe absorption length & 100 cm\\
-  \hline
-  LXe scattering length & 35 cm\\
-  \hline
-  HPFS absorption length & 100 cm\\
-  \hline
-  HPFS scattering length & $\infty$ \\
-  \hline
-  LXe refractive index & 1.61 \\
-  \hline
-  HPFS refractive index & 1.57 \\
-  \hline
-  \end{tabular}
-\end{table}
