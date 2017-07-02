@@ -6,43 +6,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {\mmd{ This part is almost complete, trigger logic details might get changed slightly}}
 
-In this section we discuss the data acquisition and readout from the PMT 
+\RanComment{I think we better starting with.. The DAQ system consist of.. I dont see a point with starting we describe in this section.} In this section we discuss the data acquisition and readout from the PMT 
 channels. We use a heterogeneous system consisting of both 
-NIM and VME electronics modules, with the data readout being carried out through 
-the VME controller module V2718 and a PCIe card A3818. 
+NIM and VME electronics modules, with the data readout being carried out through the VME controller module V2718 and a PCIe card A3818. 
 
-The schematic layout 
-of the DAQ system is shown in Fig.~{\ref{Fig:DAQscheme}}. All the 20 PMTs 
-are oriented in the holder assembly which was discussed in section \ref{subsubsec:sphere}. 
-The PMTs are ramped up to +800V (the maximum is +900V) using a 24 channel 
-VME high volatge distributor module \footnote{iseg VDS18130p}.  
-We define the raw electrical pulse output of the PMTs as S{\it i} (raw), where {\it i} = 1 -- 20. 
-These raw pulses are then 
-amplified and shaped using two photomultiplier preamplifiers \footnote{Phillips 776. 
-Each of the preamplifier model provides 16 independent  and direct-coupled 
-amplifiers channels}. The preamplifier channels operates from DC to 275 MHz and 
-produce two identical 50 $\Omega$ non inverting outputs with voltage gains of 10. 
-We define the amplified pulses as S{\it i}, ({\it i} = 1 -- 20). One out of the 
-two identical analog outputs from each channel is converted to a digital 
-signal with an Analog to Digitizer converter \footnote{CAEN ADC V1742: Switched capacitor Digitizer}. 
+The schematic layout of the DAQ system is shown in Fig.~{\ref{Fig:DAQscheme}}. \sout{All the 20 PMTs are oriented in the holder assembly which was discussed in section \ref{subsubsec:sphere}.} The PMTs are ramped up to +800V (the maximum is +900V) using a 24 channel VME high volatge distributor module \footnote{iseg VDS18130p}. \RanComment{S{\it i} is defined as the ... or the electrical pulse output of the PMTs is denoted as..}We define the raw electrical pulse output of the PMTs as S{\it i} (raw), where {\it i} = 1 -- 20. 
+These raw pulses are then amplified and shaped using two photomultiplier preamplifiers \footnote{Phillips 776. Each of the preamplifier model provides 16 independent and direct-coupled amplifiers channels}. The preamplifier channels operates from DC to 275 MHz and produce two identical 50 $\Omega$ non inverting outputs with voltage gains of 10. \RanComment{again I would drop the we} We define the amplified pulses as S{\it i} \RanComment{Isn't this the same notation as the raw data?}, ({\it i} = 1 -- 20). One out of the two identical analog outputs from each channel is converted to a digital signal with an Analog to Digitizer converter \footnote{CAEN ADC V1742: Switched capacitor Digitizer}. \RanComment{Do we use a fan in fan out module , if so I would state using a fifo 2 signals a re produced ?}
 
 The ADC consists of two 12bit 5GS/s Switched capacitor Digitizer sections, 
-each of them with 16+1 channels, based on DRS4 chip. The dynamic range of the input 
-signal is 1 Vpp with adjustable DC offset. This module can sample either bipolar or 
-unipolar analog input signal within the dynamic range in a circular 
+each of them with 16+1 channels, based on DRS4 chip. The dynamic range of the input signal is 1 Vpp with adjustable DC offset. This module can sample either bipolar or unipolar analog input signal within the dynamic range in a circular 
 analog memory buffer, with default sampling frequency choices 5GS/s, 2.5 GS/s 
 or 2 GS/s. As soon as a trigger signal reaches, all the analog memory 
 buffers gets frozen and then gets digitized into a digital memory buffer 
 with a 12 bit resolution. 
 
-We generate an intrinsic trigger for the system, 
-with the coincidence of any two out of the twenty PMTs. The second output from the 
-preamplifier channels are converted to binary signals using two 16 channel leading 
-Edge discriminator \footnote{CAEN V895}. In Fig.~\ref{Fig:DAQscheme}, we term the binary 
-outputs from the discriminator as SD{\it i}, i= 1 -- 20. The SD{\it i} signals are then passed over to 
-the logic module \footnote{CAEN V1495, an FPGA based General purpose VME board which is programmed to perform the 
-logic operation} to obtain the trigger. At present, the coincidence of any two out 
-of the twenty PMTs forms the trigger logic. The output of the logic operation is 
+\RanComment{I would drop the we, though here it is not that bad, bu t then maybe its better to say we trigger on ...} We generate an intrinsic trigger for the system, with the coincidence of any two out of the twenty PMTs. The second output from the preamplifier channels are converted to binary signals using two 16 channel leading Edge discriminator \footnote{CAEN V895}. In \sout{Fig.~\ref{Fig:DAQscheme}, we term} the binary outputs from the discriminator \RanComment{are denoted} as SD{\it i}, i= 1 -- 20. The SD{\it i} signals are then passed over to the logic module \footnote{CAEN V1495, an FPGA based General purpose VME board which is programmed to perform the 
+logic operation} to obtain the trigger. \RanComment{I think this is redundent we already stated this} \sout{At present, the coincidence of any two out of the twenty PMTs forms the trigger logic.} The output of the logic operation is 
 used to trigger the ADC. In order to record the PMT noise rate, the 
 SD{\it i} signals are duplicated and fed to a scaler \footnote{CAEN V830}.
 
@@ -59,11 +38,7 @@ SD{\it i} signals are duplicated and fed to a scaler \footnote{CAEN V830}.
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The PMT event information and the trigger rate are read from the ADC, while the Scaler 
-records the PMT noise rate. The data readout to the acquisition PC is done through the 
-Controller and optical link to the master PCIe card. The further analyses of the 
-relevant events in the PMTs will be carried out offline using an analysis 
-framework.
+The PMT event information and the trigger rate are read from the ADC, while the Scaler records the PMT noise rate. The data readout to the acquisition PC is done through the Controller and optical link to the master PCIe card. \RanComment{not sure this is needed. but in any case I would move to present form}The further analyses of the relevant events in the PMTs will be carried out offline using an analysis framework.
 
 
 
