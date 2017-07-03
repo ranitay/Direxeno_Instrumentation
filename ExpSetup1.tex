@@ -7,21 +7,14 @@
 %Comment: The detector section has been modified. MMdevi's changes are made in blue
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The experimental setup \mmd{of DIREXENO} is described in this section. This setup is 
+The experimental setup of DIREXENO is described in this section. This setup is 
 designed to measure the spatial and temporal properties of LXe scintillation. 
-\mmd{It consists of} a modular \mmd{design in order to extend its flexibility
-to fulfill the requirement of any different future experiments}. 
+It consists of a modular design in order to extend its flexibility
+to fulfill the requirement of any different future experiments. 
 
-Four main building blocks \mmd{constitutes of} the full setup, a schematics 
-of which, with the interfaces \mmd{between} them is shown in Fig.~\ref{fig:fullschematics}. 
-The gas handling system, \sout{which,} in normal working mode, drives the xenon from the detector 
-through a purifier and \mmd{cycles} back into the detector. The cryogenic system \sout{, which} 
-liquefies the xenon and delivers it to the detector system. The detector system \mmd{consists of a 
-fused silica sphere that holds a small bubble of LXe target, and PMTs around the sphere. The 
-supply of high voltage (HV) to the PMTs and the data readout are carried out through the 
-data acquisition system (DAQ) system. These four building 
-blocks are independent of each other construction wise, and can be replaced without 
-altering features in the others. }
+Four main building blocks constitutes of the full setup, a schematics 
+of which, with the interfaces between them is shown in Fig.~\ref{fig:fullschematics}. The gas handling system, in normal working mode, drives the xenon from the detector through a purifier and cycles it back into the detector. The cryogenic system, liquefies the xenon and delivers it to the detector system. The detector system consists of a fused silica sphere that holds a small bubble of LXe target, and PMTs around the sphere. The supply of high voltage (HV) to the PMTs and the data readout are carried out through the 
+data acquisition system (DAQ) system \RanComment{is it fine that we change the weight here ?}. These four building blocks are independent of each other construction wise, and can be replaced without altering features in the others. 
 
 \begin{figure}[h]
 \centerline{\includegraphics[width=0.8\linewidth]{WholeSys.png}}
@@ -29,11 +22,8 @@ altering features in the others. }
 \label{fig:fullschematics}
 \end{figure}
 
-\mmd{As shown in Fig.~\ref{fig:fulldet}}, the full assembly is held on three separate racks, 
-one for the \mmd{gas handling system, another to hold the cryogenic and the detector while 
-the third one assigned for the DAQ}. The racks are joined using a 100mm bar with shock 
-absorbers on both sides. Some of the guidelines for the design of DIREXENO are based 
-on~\cite{Giboni}.  
+\mmd{As shown in Fig.~\ref{fig:fulldet}}, the full assembly is held on three separate racks \RanComment{I prefer maybe the full assembly, shown in Fig. ,}, 
+one for the gas handling system, another to hold the cryogenic and the detector while the third one \RanComment{is ?} assigned for the DAQ. The racks are joined using a 100mm bar with shock absorbers on both sides. Some of the guidelines for the design of DIREXENO are based on~\cite{Giboni}.  
 
 \begin{figure}[h]
 \centerline{\includegraphics[width=0.8\linewidth]{FullDet.jpg}}
@@ -46,12 +36,8 @@ chamber, and on th right the Data acquisition system.}
 \label{subsec:gas}
 
 A typical LXe detector must keep a high level of purity. Careful selection and 
-meticulous cleaning of all parts before mounting is needed, however it is not sufficient. 
-The desired level of most detectors of impurity concentration is at the level of 1 ppb $O_2$ 
-equivalent~\cite{Aprile:2009dv}. This is crucial to allow ionization electrons drift for several 
-cm. To reach that level in a reasonable amount of time (several days instead of months), 
-a continuous purification is needed. The gas handling system provides this process 
-along with all gas handling operations such as filling and recuperation.
+meticulous cleaning of all parts before mounting is needed, however it is not sufficient. The desired level of most detectors of impurity concentration is at the level of 1 ppb $O_2$ equivalent~\cite{Aprile:2009dv}. This is crucial to allow ionization electrons drift for several cm. To reach that level in a reasonable amount of time (several days instead of months), 
+a continuous purification is needed. The gas handling system provides this process along with all gas handling operations such as filling and recuperation.
 
 During purification mode, xenon is taken from the chamber (in liquid phase)
 passes through a heat exchanger\footnote{GEA GBS100M-24 plate heat exchanger} 
@@ -62,8 +48,8 @@ also passes through an MKS Mass Flow Controller\footnote{MKS mass flow controlle
 this allows monitoring and controlling the amount of xenon in the system. 
 
 After the xenon is purified, it is delivered back to the cryogenic system 
-through the heat exchanger, \mmd{where the remaining gaseous} xenon is 
-liquefied before it \mmd{continues} back to the chamber. A schematic of this 
+through the heat exchanger, where the remaining gaseous xenon is 
+liquefied before it continues back to the chamber. A schematic of this 
 system is shown in fig.~\ref{fig:gasSchematic}.
 
 
@@ -80,20 +66,15 @@ a valve with an arrow.}
 \subsection{Cryogenic system}
 \label{subsec:cryo}
 
-Remote cooling is generally used in DM experiments due to background \mmd{radiati\sout{ng}on(?)} 
+Remote cooling is generally used in DM experiments due to background radiation
 from the cooler to the detector. Although this is not of a great 
 importance in our system, there still are several advantages of remote 
 cooling such as: lowering acoustic noise from the cryo-cooler and 
-flexibility to design changes. The cryogenic system is connected to the gas \mmd{handling} system on 
-one side and to the detector chamber on another side. \mmd{The next sentence seems a bit unclear, can it be slightly rephrased?: 
-Any change in the system (e.g, cooler type or model) requires 
-the change of that specific part without changing the detector nor the gas system.}
+flexibility to design changes. The cryogenic system is connected to the gas handling system on one side and to the detector chamber on another side. \RanComment{The cryogenic system is build such that replacing the cryo-cooler type (e.g., to PTR) requires just an adaptation to the top flange.}
 
-The system is made \sout{out} of two chambers, the outer vessel (OV) which holds 
-the insulation vacuum, and the inner vessel (IV) that holds the xenon. In addition 
-to the vacuum which prevents heat leak\mmd{age} from diffusion and convection, the entire 
-IV is covered by multi layer aluminized Myler to prevent heating via radiation. \mmd{The CAD view of 
-the design of the cryogenic system and a photo of the actual system} are shown in Fig~\ref{fig:cryo}. 
+The system is made of two chambers, the outer vessel (OV) which holds 
+the insulation vacuum, and the inner vessel (IV) that holds the xenon. In addition to the vacuum which prevents heat leakage due to diffusion and convection, the entire IV is covered by multi layer aluminized Myler to prevent heating via radiation. The CAD view of 
+the design of the cryogenic system and a photo of the actual system are shown in Fig~\ref{fig:cryo}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
@@ -105,8 +86,8 @@ the design of the cryogenic system and a photo of the actual system} are shown i
 \includegraphics[width=\textwidth]{cryoOpenCrop.png}
 \end{subfigure}
 \caption{ CAD view of the cryogenic system(Left) and a picture of the cryogenic system (Right) . 
-\mmd{I would prefer the caption in the following way: ``The cryogenic system. (Left) CAD design view, 
-(right) picture of the actual system.''}
+The cryogenic system. (Left) CAD design view, 
+(right) picture of the actual system.
 \label{fig:cryo}}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -120,7 +101,7 @@ resulting in a better heat transport. The design of the cold finger is similar t
 of~\cite{xe100_instr2012}. The upper part of the cold finger is in thermal contact with the 
 cryo-cooler~\footnote{QDrive 20BB 9p6 A 3 AYNBNCO} via a copper adapter. The copper adapter 
 holds two $100\Omega$ pt resistor which are connected to a PID reader\footnote{cryo-con model 
-18i Cryogenic Temp Monitor} for temperature measurements. A \mmd{\sout{C}}cartridge-heater 
+18i Cryogenic Temp Monitor} for temperature measurements. A cartridge-heater 
 is also inserted to the copper adapter for emergency heating in case xenon freezes on the 
 cold finger. 
 
@@ -136,7 +117,7 @@ This flange is connected to the detector part, via a $3\frac{3}{8}$" flexible be
 bellows hosts two small pipes connected to the circulation system, and a third pipe coming 
 from the funnel. All three pipes deliver LXe whereas the GXe is filling the bellows. The 
 separation between the LXe coming from the gas handling system (clean) and the LXe coming 
-from the cold finger (more \mmd{\sout{dirty} impure}) allows the filling of clean LXe to 
+from the cold finger (more impure) allows the filling of clean LXe to 
 different parts of 
 the detector. 
 
@@ -144,12 +125,12 @@ the detector.
 \subsection{The Detector}
 \label{subsec:det}
  
-The detector refers to the chamber and its inner assembly \mmd{consisting} 
-mainly {of} an HPFS\footnote{High Purity Fused Silica. Corning HPFS 8655 material is used.} sphere that 
+The detector refers to the chamber and its inner assembly consisting 
+mainly of an HPFS\footnote{High Purity Fused Silica. Corning HPFS 8655 material is used.} sphere that 
 contains the liquid Xenon, the photomultiplier detectors around it and their accessories. 
-This chamber is placed below the cryogenic system. \RanComment{We describe separately these two parts} \mmd{I feel 
+This chamber is placed below the cryogenic system. \mmd{I feel 
 that when we say ``these two parts'', it might not be a clear statement. We may either skip what we describe entirely, 
-or might keep it as in the following.}
+or might keep it as in the following.} \RanComment{agreed I think we can drop this , the paper is short enough so we don't need to detail where we describe what.}
 We describe the detector chamber and its interface to the cryogenic system in 
 section \ref{subsubsec:detchamber}. In section \ref{subsubsec:sphere} we discuss the assembly 
 that consists of the HPFS sphere to hold liquid Xenon and the Photomultiplier detectors distributed 
@@ -158,7 +139,7 @@ around the sphere.
 \subsubsection{The Detector Chamber}
 \label{subsubsec:detchamber}
 
-The detector chamber is built \mmd{in} such \mmd{a way} that apart from the interface to the cryogenic system, it can 
+The detector chamber is built in a way that apart from the interface to the cryogenic system, it can 
 be changed and modified easily for future experiments. The interface unit is built out of 2 flanges 
 welded together via 7 tubes, which serve as service ports for electrical and other feedthroughs, 4 
 with a $2 \frac{3}{4}/$ CF flange, and 3 with a $1\frac{1}{3}$ CF flange. 
@@ -187,7 +168,7 @@ The central component of the detector assembly is a hollow sphere
 which holds the LXe bubble. A spherical shell made of Corning HPFS 8655 with high transmittance is 
 designed to hold the LXe target. Two invar tubes 
 are connected to the HPFS sphere from the top and bottom with 
-SS mini-CF flanges at the end, \mmd{which} allows \mmd{the} circulation \mmd{of xenon} through 
+SS mini-CF flanges at the end, which allows \sout{the} circulation of xenon through 
 the sphere. The technical design and image of the sphere are shown in Fig.~\ref{fig:sphere}. 
 The bottom flange of the sphere is held using a brass holder to prevent 
 force or torque applied on the sphere while mounting the detector. The 
@@ -206,8 +187,8 @@ are placed around the sphere to detect light emitted from the LXe.
 \begin{subfigure}[c]{0.25\textheight}
 \includegraphics[width=\textwidth]{spherephoto.png}
 \end{subfigure}
-\caption{\mmd{(Left)} The technical design of the HPFS shell with invar tubing and mini CF flanges. 
-\mmd{(Right)} The industrially manufactured HPFS shell.} 
+\caption{(Left)The technical design of the HPFS shell with invar tubing and mini CF flanges. 
+(Right) The industrially manufactured HPFS shell.} 
 \label{fig:sphere}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -221,7 +202,7 @@ shell should have a refractive index as similar to LXe as possible in order to
 have minimal diffraction from the original direction of the photons when they 
 travel from the LXe target to the sphere. Corning HPFS 8655 is chosen as the shell 
 material. The refractive index of HPFS 8655 is 1.575 at 185 nm (LXe R.I. 1.61). 
-In Fig.~\ref{fig:hpfsRIcalibration} (left panel), are the refractive indices at various wavelengths 
+In Fig.~\ref{fig:hpfsRIcalibration} (left panel), are the refractive indexes at various wavelengths 
 as provided on the HPFS 8655 fact sheet as well as a naive extrapolation to lower wavelengths 
 which are relevant to us. 
 
@@ -235,8 +216,8 @@ which are relevant to us.
 \end{figure}
 
 The transmittance of the material is an extremely crucial parameter to optimize the 
-dimension of the shell. \mmd{Therefore, a sample of HPFS 8655 was tested for transmittance 
-using a VUV monochromator}. 
+dimension of the shell. Therefore, a sample of HPFS 8655 was tested for transmittance 
+using a VUV monochromator. 
 In fig.~\ref{fig:hpfsRIcalibration} (right panel), the measured 
 transmittances (\%/cm) at (150 - 215)~\,nm are plotted. At 175~\,nm, the intrinsic transmittance 
 of the sample about 98.7\%/cm.  
@@ -261,8 +242,8 @@ V the gain of these PMTs is ~ 2 $\times$ 10$^6$. A positive voltage divider,
 also manufactured by Hamamatsu,  is used to to provide high voltage to the PMTs. 
 The PMTs are held with a special aluminum holder, coated with anti-reflection substance. 
 The holder is made of two hemispheres hosting the PMTs in 3 rows all of them pointing to the 
-center of the HPFS sphere. The PMTs are held only via their voltage--divider bases, \mmd{while} 
-the bases are \mmd{fixed with} M2 PEEK screws. 
+center of the HPFS sphere. The PMTs are held only via their voltage--divider bases, while 
+the bases are fixed with M2 PEEK screws. 
 In Fig.~\ref{fig:pmtholder}, one of the holder--hemispheres with the 
 PMTs is shown. A CAD schematic and a real view of the detector assembly are shown 
 in In Fig.~\ref{fig:detector}.
