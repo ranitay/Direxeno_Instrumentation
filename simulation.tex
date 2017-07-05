@@ -1,19 +1,17 @@
 \section{Simulation (\mmd{in progress})}
 \label{sec:sim}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-A GEANT4 based simulation of the detector is caried out which uses realistic optical parameters, 
-and takes into account the physics processes of the propagation of the photons produced in the LXe 
-and propagating to the PMTs via the HPFS sphere and vacuum. Assuming various pattern of the LXe 
-scintillation, the photons detected at the PMTs are mapped and put through a statistical test to 
-check the detector's sensitivity towards those patterns.
+A GEANT4 based simulation of the detector is caried out which uses realistic optical parameters, and takes into account the physics processes of the propagation of the photons produced in the LXe and propagating to the PMTs via the HPFS sphere and vacuum.\RanComment{this is a bit of a run-on sentence I would make shorter saying A GEANT4 simulation is used to model the  propagation of the photons through the different materials. or something like this}
+\RanComment{maybe would be more understanble if we make his shorter just as small intro sentence something like : "To asses the sensitivity of the detector a GEANT4 based simulation is used. Several emission types and the propagation of photons in the detector are simulated to produce The PMT hit pattern for each type."}
+Assuming various pattern of the LXe scintillation, the photons detected at the PMTs are mapped and put through a statistical test to check the detector's sensitivity towards those patterns.
 
-The realistic dimension of the detector assembly has been used in the simulation. The important 
-geometrical and optical parameters used in the simulation are listed in Table~\ref{tab:OptPar}. 
-In the simulation 
-framework, The probability for a photon being transmitted/reflected at a given surface is 
+The realistic dimension of the detector assembly \sout{has been} \RanComment{is} used in the simulation. The important 
+geometrical and optical parameters \sout{used in the simulation} are listed in Table~\ref{tab:OptPar}. 
+\sout{In the simulation 
+framework,} The probability for a photon being transmitted/reflected at a given surface is 
 determined by Fresnel's equations, which include Snell's law for the transmitted light, 
 and specular reflection for the reflected light. The boundary surfaces between different media
-such as, the LXe--HPFS, HPFS--vacuum and vacuum--PMT, are considered to be perfectly smooth, 
+such as, the LXe--HPFS, HPFS--vacuum and vacuum--PMT, are \RanComment{assumed ?} considered to be perfectly smooth, 
 therefore enabling only specular reflection.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -42,12 +40,12 @@ therefore enabling only specular reflection.
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The photons reaching the PMTs can either be detected or absorbed or reflected from the photocathode 
-or the PMT window. In the simulation, a simplified approach of the above possibilities is considered -- 
+The photons reaching the PMTs can either be detected, absorbed or reflected from the photocathode 
+or the PMT window. \sout{In the simulation,} a simplified approach of the above possibilities is considered -- 
 A photon on the PMT has 30\% probability to be detected (since QE $\geq$ 30\%), 50\% probability to get 
 absorbed and 20\% probability to get specularly reflected. As the scintillation light in a particular 
 event is emitted by a cloud of excited diatomic molecules, with a linear size much smaller than that 
-of the optical system, we simulate each event as a number of photons that are emitted from a point 
+of the optical system, \sout{we simulate} each event \RanComment{is simulated} as a number of photons that are emitted from a point 
 in the LXe. The events are uniformly generated in the LXe volume to simulate an entirely radiated 
 target much smaller than the mean free path length of the source particles in LXe.
 
@@ -55,7 +53,7 @@ For each scintillation event, a number of photons are detected by the PMTs, with
 no photons detected by some of the PMTs. The exact position on the photocathode which the photons hit, 
 and the exact number of photons falling on a PMT are not known. The electronic signal generated in a PMT 
 for a certain number of incident photon is statistical in nature. The simulation is performed for both 
-ideal photon counting and statistical photon counting. The R8520 PMTs also have about 20\% probability 
+ideal photon counting and statistical photon counting. The R8520 PMTs also has  ~20\% probability 
 for double photoelectris emission for 178 nm photons, which is also included in the simulation.
 Each detected photon 
 on a PMT is then assigned a uniformly random position on the PMT surface. The direction of this point with respect 
@@ -64,7 +62,7 @@ is then used to calculate the angles between all possible pairs of photon in an 
 
 In order to test the emission pattern, the angle correlation distribution of a large sample ($10^5$ events) 
 from isotropic emission is considered to be the PDF of the null hypothesis and is compared 
-to that of a number of smaller samples ($10^5$ events) from fifferent types of anisotropic emissions. 
+to that of a number of smaller samples ($10^5$ events\RanComment{this is the same number so why smaller ? }) from different types of anisotropic emissions. 
 The reduced $\chi^2$ for each sample is calculated as follows.
 
 \begin{equation}
@@ -73,12 +71,12 @@ The reduced $\chi^2$ for each sample is calculated as follows.
 \end{equation}
 
 where, $O_i$ is the observed count in the $i^{th}$ angle bin, $E_i$ is the expected count in the $i^{th}$ 
-angle bin and $\nu$ is the total number of angle bins and also the degree of freedom. In this analysis, 
-60 bins of identical width are used. The anisotropic emmission patterns used in the analysis are listed 
+angle bin and $\nu$ is the total number of angle bins \RanComment{which is } and also the degree of freedom. In this analysis, 
+60 bins of identical width are used. The anisotropic emission patterns used in the analysis are listed 
 in Table~\ref{tab:AnisoPattern}. For each emission pattern,  an anisotropic pattern is taken to be embedded 
 in an isotropic background. The fraction of photons in the anisotropic pattern ($r_{aniso}$) is 10 \% of the net photons 
-and the rest is the isotropic background. For multiple beams in a pattern $r_{aniso}$ is splitted among them 
-as mentioned in the Table. The beams of photons are of Gaussian nature, and their emission direction are 
+and the rest is the isotropic background. For multiple beams in a pattern $r_{aniso}$ is spitted among them 
+as mentioned in the Table. The \RanComment{Intensity ?}beams of photons are of Gaussian nature, and their emission direction are 
 randomly varied in each event.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
