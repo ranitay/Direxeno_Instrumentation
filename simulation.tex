@@ -76,7 +76,7 @@ angle bin and $\nu$ is the total number of angle bins which is also the degree o
 60 bins of identical width are used. The anisotropic emission patterns used in the analysis are listed 
 in Table~\ref{tab:AnisoPattern}. For each emission pattern,  an anisotropic pattern is taken to be embedded 
 in an isotropic background. The fraction of photons in the anisotropic pattern ($r_{aniso}$) is 10 \% of the net photons 
-and the rest is the isotropic background. For multiple beams in a pattern $r_{aniso}$ is spitted among them 
+and the rest is the isotropic background. For multiple beams in a pattern $r_{aniso}$ is splitted among them 
 as mentioned in the Table. The intensity of the beams of photons are of Gaussian nature, and their emission direction are 
 randomly varied in each event.
 
@@ -114,12 +114,47 @@ randomly varied in each event.
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Results:
+The number of events needed to detect the anisotropy of a pattern with 
+high statistical significance is estimated by calculating $\chi^2/\nu$ 
+for a data sample. 100 data sets generated with different random seeds are 
+used to obtain the 2$\sigma$ fluctuation on <$\chi^2/\nu$>. The <$\chi^2/\nu$> 
+and its 2$\sigma$ band for pattern 1 are compared to the corresponding values 
+for an isotropic emission in Fig.~\ref{fig:pattern1}. The <$\chi^2/\nu$> for 
+isotropic emission fluctuate around 1 with $\sigma$ = 0.2 which is consistent with 
+the expected value of $\frac{1}{\sqrt{30}} \equiv 0.18$ for reduced $\chi^2$ distribution 
+with 60 degrees of freedom. A value of <$\chi^2/\nu$> = 2.1, which is 5$\sigma$ away from the 
+band of isotropic emission is set as the pattern distinction criteria, and the number of events 
+$N^{/}$ which is required to achieve that <$\chi^2/\nu$> value is calculated. The values of 
+$N^{/}$ for all the emission patterns which are listed in Table~\ref{tab:AnisoPattern} are shown 
+in the left panel of Fig.~\ref{fig:convergence}. The values of $N^{/}$, when the fraction of anisotropic 
+emission is varied in pattern 1 and pattern 9, are shown in the right panel of Fig.~\ref{fig:convergence}. 
+A simulation with two typical sources that emit uniformly in 4$\pi$, a 10 $\mu$Ci $^{137}Cs$ $\gamma$ 
+source (662 keV), and a 2.7 $\mu$Ci AmBe neutron source (5 MeV), shows that for an yield of 
+50photons/event it would take about 16 days for electron recoil (ER) events and about 0.8 days for 
+nuclear recoil (NR) events to reach $10^4$ events. Therefore a system that can operate stably for few weeks 
+is expected to do reasonable measurements for ER and NR events.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
 \centerline{\includegraphics[width=0.5\linewidth]{Pattern1.pdf}}
-\caption{}
+\caption{<$\chi^2/\nu$> and its $2\sigma$ band for isotropic emission (black) and for pattern 1 (red). 
+The number of events needed to discriminate the pattern is defined as that for which 
+the $2\sigma$ band crosses <$\chi^2/\nu$> = 2.1, i.e., $5\sigma$ away from the <$\chi^2/\nu$> for isotropy. }
 \label{fig:pattern1}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\linewidth]{ConvergenceVsPattern.pdf}
+\hspace{0.1cm}
+\includegraphics[width=0.45\linewidth]{ConvergenceVsRaniso.pdf}
+\caption{(Left) The number of events needed for each emission pattern to cross <$\chi^2/\nu$> = 2.1. Here 
+$r_{aniso}$ = 0.1. (Right) The number of events needed for pattern 1 and pattern 9 to cross <$\chi^2/\nu$> = 2.1 
+for four different values of $r_{aniso}$.}
+\label{fig:convergence}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
