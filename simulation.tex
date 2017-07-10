@@ -1,8 +1,8 @@
 \section{Simulation (\mmd{in progress})}
 \label{sec:sim}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-To asses the sensitivity of the detector to identify an emission pattern a GEANT4 based simulation is used. 
-Several emission types and the propagation of photons in the detector are simulated to produce the hit patern  
+To asses the sensitivity of the detector to identify an emission pattern, a GEANT4 based simulation is used. 
+Several emission types and the propagation of photons in the detector are simulated to produce the hit pattern  
 at the PMTs for each type. 
 Assuming a number of test patterns of the LXe scintillation, the photons detected at the PMTs are mapped and put 
 through a statistical test to check the detector's sensitivity towards those patterns.
@@ -42,27 +42,27 @@ therefore enabling only specular reflection.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The photons reaching the PMTs can either be detected, absorbed or reflected from the photocathode 
-or the PMT window. A simplified approach of the above possibilities is considered -- 
-A photon on the PMT has 30\% probability to be detected (since QE $\geq$ 30\%), 50\% probability to get 
-absorbed and 20\% probability to get specularly reflected. As the scintillation light in a particular 
-event is emitted by a cloud of excited diatomic molecules, with a linear size much smaller than that 
-of the optical system, each event is simulated as a number of photons that are emitted from a point 
+or from the PMT window. A simplified approach of the above possibilities is considered -- \RanComment{Not sure nut maybe : instead of --}
+A photon \RanComment{reaching/arriving} on the PMT has \RanComment{is considered/assumed to have ?} 30\% probability to be detected (since QE $\geq$ 30\%), 50\% probability to get 
+absorbed and 20\% probability to get specularly reflected. \sout{As} the scintillation light \RanComment{from ?}in a particular 
+event is emitted by a cloud of \sout{excited diatomic molecules}\RanComment{excimers}. \RanComment{This cloud has/is assumed to have ?} \sout{with} a linear size much smaller than that 
+of the optical system, RanComment{. Therefore/Hence,} each event is simulated as a number of photons that are emitted from a point 
 in the LXe. The events are uniformly generated in the LXe volume to simulate an entirely radiated 
-target much smaller than the mean free path length of the source particles in LXe.
+target much smaller than the mean free path length of the source particles in LXe\RanComment{Not sure I understand what is said here}.
 
 For each scintillation event, a number of photons are detected by the PMTs, with a possibility of 
-no photons detected by some of the PMTs. The exact position on the photocathode which the photons hit, 
+no photons detected by some of the PMTs\RanComment{Do you think adding due to the above mentioned assumption or something like this?}. The exact position on the photocathode which the photons hit, 
 and the exact number of photons falling on a PMT are not known. The electronic signal generated in a PMT 
-for a certain number of incident photon is statistical in nature. The simulation is performed for both 
+for a certain number of incident photon is statistical in nature\RanComment{missing the consequence- hence Poisson fluctuations are taken into account?}. The simulation is performed for both 
 ideal photon counting and statistical photon counting. The R8520 PMTs also has  ~20\% probability 
-for double photoelectris emission for 178 nm photons, which is also included in the simulation.
+for double photoelectric emission for 178 nm photons, which is also included in the simulation.
 Each detected photon 
-on a PMT is then assigned a uniformly random position on the PMT surface. The direction of this point with respect 
+on a PMT is \sout{then} assigned a uniformly random position on the PMT surface. The direction of this point with respect 
 to the center of the LXe sphere is defined as the incident direction of the photon. The direction information 
-is then used to calculate the angles between all possible pairs of photon in an event.
+is then used to calculate the angles between all possible pairs of photon \RanComment{for}\sout{in} an\RanComment{y} event.
 
 In order to test the emission pattern, the angle correlation distribution of a large sample ($10^5$ events) 
-from isotropic emission is considered to be the PDF of the null hypothesis and is compared 
+from isotropic emission is considered \RanComment{as}\sout{to be} the PDF of the null hypothesis and is compared 
 to that of a number of smaller samples ($10^4$ events) from different types of anisotropic emissions. 
 The reduced $\chi^2$ for each sample is calculated as follows.
 
@@ -75,8 +75,8 @@ where, $O_i$ is the observed count in the $i^{th}$ angle bin, $E_i$ is the expec
 angle bin and $\nu$ is the total number of angle bins which is also the degree of freedom. In this analysis, 
 60 bins of identical width are used. The anisotropic emission patterns used in the analysis are listed 
 in Table~\ref{tab:AnisoPattern}. For each emission pattern,  an anisotropic pattern is taken to be embedded 
-in an isotropic background. The fraction of photons in the anisotropic pattern ($r_{aniso}$) is 10 \% of the net photons 
-and the rest is the isotropic background. For multiple beams in a pattern $r_{aniso}$ is splitted among them 
+in an isotropic background. The fraction of photons in the anisotropic pattern ($r_{aniso}$) is 10 \% of the net photons ,
+\sout{and} the rest \sout{is} \RanComment{are} the isotropic background. For multiple beams in a pattern $r_{aniso}$ is \sout{splitted} \RanComment{split} among them 
 as mentioned in the Table. The intensity of the beams of photons are of Gaussian nature, and their emission direction are 
 randomly varied in each event.
 
@@ -114,25 +114,26 @@ randomly varied in each event.
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The number of events needed to detect the anisotropy of a pattern with 
+\sout{The number of events needed to detect the anisotropy of a pattern with 
 high statistical significance is estimated by calculating $\chi^2/\nu$ 
-for a data sample. 100 data sets generated with different random seeds are 
-used to obtain the 2$\sigma$ fluctuation on <$\chi^2/\nu$>. The <$\chi^2/\nu$> 
-and its 2$\sigma$ band for pattern 1 are compared to the corresponding values 
-for an isotropic emission in Fig.~\ref{fig:pattern1}. The <$\chi^2/\nu$> for 
+for a data sample.} 100 data sets generated with different random seeds are 
+\sout{used} \RanComment{generated} to obtain the 2$\sigma$ fluctuation on <$\chi^2/\nu$> \RanComment{I dont understand, can this number be calculated, if so lets add the calculation, if its just a number we believe is high enough then no need to add the whole 2 sigma part }. The <$\chi^2/\nu$> 
+and its 2$\sigma$ band for pattern 1 \sout{are compared to} \RanComment{overlaid with} the corresponding values 
+for an isotropic emission \RanComment{are presented/shown }in Fig.~\ref{fig:pattern1}. The <$\chi^2/\nu$> for 
 isotropic emission fluctuate around 1 with $\sigma$ = 0.2 which is consistent with 
 the expected value of $\frac{1}{\sqrt{30}} \equiv 0.18$ for reduced $\chi^2$ distribution 
-with 60 degrees of freedom. A value of <$\chi^2/\nu$> = 2.1, which is 5$\sigma$ away from the 
+with 60 degrees of freedom. A value of <$\chi^2/\nu$> = 2.1, which is 5$\sigma$ \sout{away} from the 
 band of isotropic emission is set as the pattern distinction criteria, and the number of events 
-$N^{/}$ which is required to achieve that <$\chi^2/\nu$> value is calculated. The values of 
-$N^{/}$ for all the emission patterns which are listed in Table~\ref{tab:AnisoPattern} are shown 
+$N^{/}$ which is required to achieve that <$\chi^2/\nu$> value is calculated\RanComment{I dont understand this last sentence}. The values of 
+$N^{/}$ \RanComment{What is $N^{/}$} for all the emission patterns \sout{which are listed in Table~\ref{tab:AnisoPattern}}\RanComment{(see Table~\ref{tab:AnisoPattern})} are shown 
 in the left panel of Fig.~\ref{fig:convergence}. The values of $N^{/}$, when the fraction of anisotropic 
-emission is varied in pattern 1 and pattern 9, are shown in the right panel of Fig.~\ref{fig:convergence}. 
+emission is varied \sout{in}\RanComment{for} pattern 1 and pattern 9, are shown in the right panel of Fig.~\ref{fig:convergence}. 
+
 A simulation with two typical sources that emit uniformly in 4$\pi$, a 10 $\mu$Ci $^{137}Cs$ $\gamma$ 
 source (662 keV), and a 2.7 $\mu$Ci AmBe neutron source (5 MeV), shows that for an yield of 
 50photons/event it would take about 16 days for electron recoil (ER) events and about 0.8 days for 
 nuclear recoil (NR) events to reach $10^4$ events. Therefore a system that can operate stably for few weeks 
-is expected to do reasonable measurements for ER and NR events.
+is expected to do reasonable measurements for ER and NR events.\RanComment{I would reverse the order, stating that in order to get this number of events from typical sources such as .. It would require ~16 days ...}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
