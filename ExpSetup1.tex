@@ -6,28 +6,35 @@
 %Last modified by: MM Devi, May 26 2017
 %Comment: The detector section has been modified. MMdevi's changes are made in blue
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RanComment{Im missing a sentence before this explaining that the system is designed to measure spatial and temporal properties of the system}
 
-The experimental setup of DIREXENO is described in this section. This setup is 
-designed to measure the spatial and temporal properties of LXe scintillation. 
-It consists of a modular design in order to extend its flexibility
-to fulfill the requirement of any different future experiments. 
+In the DIREXENO system LXe is circulated through a small spherical cavity held in a thick HPFS sphere . The sphere is surrounded (4$\pi$) by PMTs allowing a high resolution spatial and temporal measurement of the scintillation processes of  LXe. The geometrical design of the system simulates a point like source of scintillation photons, so a detailed vertex reconstruction within the LXe drop is unnecessary. (see fig xxx) 
 
-Four main building blocks constitutes of the full setup, a schematics 
-of which, with the interfaces between them is shown in Fig.~\ref{fig:fullschematics}. 
-The gas handling system, in normal working mode, drives the xenon from the detector through 
+The guiding principles in the design were fast and easy recovery in case of  malfunction and flexibility to upgrade or redesign any part of the system to fulfill the requirement of any future experiment.
+This is achieved by a modular design. There are four main building blocks constitutes of the full setup The gas handling system, in normal working mode, drives the xenon from the detector through 
 a purifier and cycles it back into the detector. The cryogenic system, liquefies the xenon and 
 delivers it to the detector system. The detector system consists of a fused silica sphere that 
 holds a small bubble of LXe target, and PMTs around the sphere. The supply of high voltage (HV) 
-to the PMTs and the data readout are carried out through the 
-data acquisition system (DAQ) system. 
-These four building blocks are independent of each other construction wise, and can be 
-replaced without altering features in the others. 
+to the PMTs and the data readout are carried out through the data acquisition system (DAQ) system.
+ 
+%The experimental setup of DIREXENO is described in this section. This setup is  designed to measure the spatial and temporal properties of LXe scintillation. It consists of a modular design in order to extend its flexibility to fulfill the requirement of any different future experiments. 
 
-\begin{figure}[h]
-\centerline{\includegraphics[width=0.8\linewidth]{WholeSys.png}}
-\caption{A schematic of DIREXENO showing all the four building blocks of the system.}
-\label{fig:fullschematics}
-\end{figure}
+%The four main building blocks constitutes of the full setup, a schematics 
+%of which, with the interfaces between them is shown in Fig.~\ref{fig:fullschematics}. 
+%The gas handling system, in normal working mode, drives the xenon from the detector through 
+%a purifier and cycles it back into the detector. The cryogenic system, liquefies the xenon and 
+%delivers it to the detector system. The detector system consists of a fused silica sphere that 
+%holds a small bubble of LXe target, and PMTs around the sphere. The supply of high voltage (HV) 
+%to the PMTs and the data readout are carried out through the 
+%data acquisition system (DAQ) system. 
+%These four building blocks are independent of each other construction wise, and can be 
+%replaced without altering features in the others. 
+
+%\begin{figure}[h]
+%\centerline{\includegraphics[width=0.8\linewidth]{WholeSys.png}}
+%\caption{A schematic of DIREXENO showing all the four building blocks of the system.}
+%\label{fig:fullschematics}
+%\end{figure}
 
 The full assembly, shown in Fig.~\ref{fig:fulldet}, is held on three separate racks, 
 one for the gas handling system, another to hold the cryogenic and the 
@@ -36,9 +43,8 @@ detector while the third one is assigned for the DAQ. The racks are joined using
 DIREXENO are based on~\cite{Giboni}.  
 
 \begin{figure}[h]
-\centerline{\includegraphics[width=0.8\linewidth]{FullDet.jpg}}
-\caption{DIREXENO. On the left the purification system, in the middle the cryogenic and detector 
-chamber, and on th right the Data acquisition system.}
+\centerline{\includegraphics[width=0.8\linewidth]{FullSys.png}}
+\caption{DIREXENO. 1. The gas handling system. 2. The cryogenic system including the heat exchanger. 3. The detector chamber. 4. The Data acquisition system.}
 \label{fig:fulldet}
 \end{figure}
 
@@ -57,13 +63,13 @@ with all gas handling operations such as filling and recuperation.
 During purification mode, xenon is taken from the chamber (in liquid phase)
 passes through a heat exchanger\footnote{GEA GBS100M-24 plate heat exchanger} 
 where it is heated and vaporized. The xenon is forced 
-by a KNF diaphragm pump into a hot getter\footnote{MONO-TORR
+by a diaphragm pump(TODO add footnote) into a hot getter\footnote{MONO-TORR
 PS4-MT15-R-2} which cleans the xenon from most impurities. The xenon
-also passes through an MKS Mass Flow Controller\footnote{MKS mass flow controller} (MFC), 
+also passes through a mass flow controller\footnote{MKS mass flow controller} (MFC), 
 this allows monitoring and controlling the amount of xenon in the system. 
 
 After the xenon is purified, it is delivered back to the cryogenic system 
-through the heat exchanger, where the remaining gaseous xenon is 
+through the heat exchanger, where the remaining GXe is 
 liquefied before it continues back to the chamber. A schematic of this 
 system is shown in fig.~\ref{fig:gasSchematic}.
 
