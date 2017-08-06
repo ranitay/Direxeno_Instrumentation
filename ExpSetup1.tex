@@ -8,15 +8,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RanComment{Im missing a sentence before this explaining that the system is designed to measure spatial and temporal properties of the system}
 
-In the DIREXENO system LXe is circulated through a small spherical cavity held in a thick HPFS sphere . The sphere is surrounded (4$\pi$) by PMTs allowing a high resolution spatial and temporal measurement of the scintillation processes of  LXe. The geometrical design of the system simulates a point like source of scintillation photons, so a detailed vertex reconstruction within the LXe drop is unnecessary. (see fig xxx) 
+In order to identify superradiance effects in LXe, the temporal and spatial propeties of a scintilation event should be studied and quantified. In the DIREXENO system LXe is circulated through a small spherical cavity held in a thick HPFS sphere . The sphere is surrounded (4$\pi$) by PMTs allowing a high resolution spatial and temporal measurements. As the PMTs and wires do not come in contact with the xenon, less impurities are introduced to it. The geometrical design of the system simulates a point like source of scintillation photons, so a detailed vertex reconstruction within the LXe drop is unnecessary.  (see fig xxx). 
 
-The guiding principles in the design were fast and easy recovery in case of  malfunction and flexibility to upgrade or redesign any part of the system to fulfill the requirement of any future experiment.
-This is achieved by a modular design. There are four main building blocks constitutes of the full setup The gas handling system, in normal working mode, drives the xenon from the detector through 
-a purifier and cycles it back into the detector. The cryogenic system, liquefies the xenon and 
-delivers it to the detector system. The detector system consists of a fused silica sphere that 
-holds a small bubble of LXe target, and PMTs around the sphere. The supply of high voltage (HV) 
-to the PMTs and the data readout are carried out through the data acquisition system (DAQ) system.
+
+
+
+The current system is designed with \RanComment{TODO check digitzation time} $\sim1$\,ns time resolution, $<1$\,ns synchronization between PMTs, and XX radians spatial resolution. Since the exact nature and magnitude of superradiance in LXe is yet unknown a guiding principle in the design was flexibility to upgrade or redesign any part of the system to fulfill the requirement of any future experiment. In addition we gain fast and easy recovery in case of components malfunction. This is achieved by a modular design. 
+
+Four main building blocks constitute the setup. (i) \textbf{The gas handling system} which in normal working mode circulates the xenon through the set up and  purifies it. (ii) \textbf{The cryogenic system}, liquefies the xenon and 
+delivers it to the detector system. (iii) \textbf{The detector system} consists of a fused silica sphere that 
+holds a small bubble of LXe target, and PMTs around the sphere. (iv) \textbf{The DAQ system} supplies high voltage (HV) 
+to the PMTs and the handles monitoring, triggering and digitization. The entire assembly is held on 3 separate racks as shown in Fig.~\ref{fig:fulldet}.
  
+The full assembly, shown in Fig.~\ref{fig:fulldet}, is held on three separate racks, The racks are joined using a bar with shock absorbers on both sides. 
+
 %The experimental setup of DIREXENO is described in this section. This setup is  designed to measure the spatial and temporal properties of LXe scintillation. It consists of a modular design in order to extend its flexibility to fulfill the requirement of any different future experiments. 
 
 %The four main building blocks constitutes of the full setup, a schematics 
@@ -36,11 +41,7 @@ to the PMTs and the data readout are carried out through the data acquisition sy
 %\label{fig:fullschematics}
 %\end{figure}
 
-The full assembly, shown in Fig.~\ref{fig:fulldet}, is held on three separate racks, 
-one for the gas handling system, another to hold the cryogenic and the 
-detector while the third one is assigned for the DAQ. The racks are joined using a 
-100mm bar with shock absorbers on both sides. Some of the guidelines for the design of 
-DIREXENO are based on~\cite{Giboni}.  
+
 
 \begin{figure}[h]
 \centerline{\includegraphics[width=0.8\linewidth]{FullSys.png}}
@@ -48,29 +49,29 @@ DIREXENO are based on~\cite{Giboni}.
 \label{fig:fulldet}
 \end{figure}
 
-\subsection{Gas handling system}
-\label{subsec:gas}
 
-A typical LXe detector must keep a high level of purity. Careful selection and 
-meticulous cleaning of all parts before mounting is needed, however it is not 
-sufficient. The desired level of most detectors of impurity concentration is at 
+
+\subsection{The gas handling system}
+\label{subsec:gas}
+While in DIREXENO a high level of purity is not of a great importance as only the prompt scintillation is measured, in many LXE detectors the desired level of impurity concentration is at 
 the level of 1 ppb $O_2$ equivalent~\cite{Aprile:2009dv}. This is crucial to allow 
 ionization electrons drift for several cm. To reach that level in a reasonable amount 
 of time (several days instead of months), 
 a continuous purification is needed. The gas handling system provides this process along 
-with all gas handling operations such as filling and recuperation.
+with all gas handling operations such as filling and recuperation. The xenon circulation also plays a major role in heat transfer, as will be discussed in ~\ref{subsec:det}.
 
-During purification mode, xenon is taken from the chamber (in liquid phase)
+
+During purification, LXe is taken from the detector part and
 passes through a heat exchanger\footnote{GEA GBS100M-24 plate heat exchanger} 
 where it is heated and vaporized. The xenon is forced 
-by a diaphragm pump(TODO add footnote) into a hot getter\footnote{MONO-TORR
+by a diaphragm pump(\footnote{N143 SN.12E AC 230V50HZ KNF circulation pump}) into a hot getter\footnote{MONO-TORR
 PS4-MT15-R-2} which cleans the xenon from most impurities. The xenon
 also passes through a mass flow controller\footnote{MKS mass flow controller} (MFC), 
-this allows monitoring and controlling the amount of xenon in the system. 
+this allows monitoring and controlling the amount of of heat introduced to the system. 
 
 After the xenon is purified, it is delivered back to the cryogenic system 
 through the heat exchanger, where the remaining GXe is 
-liquefied before it continues back to the chamber. A schematic of this 
+liquefied before it continues back to the detector part. A schematic of this 
 system is shown in fig.~\ref{fig:gasSchematic}.
 
 
@@ -84,23 +85,25 @@ a valve with an arrow.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \subsection{Cryogenic system}
 \label{subsec:cryo}
-
+\RanComment{revisit this paragraph}
+%Some of the guidelines for the design of 
+%DIREXENO are based on~\cite{Giboni}. 
 Remote cooling is generally used in DM experiments due to background radiation
 from the cooler to the detector. Although this is not of a great 
 importance in our system, there still are several advantages of remote 
 cooling such as: lowering acoustic noise from the cryo-cooler and 
 flexibility to design changes. 
 The cryogenic system is connected to the gas handling system on 
-one side and to the detector chamber on another side. 
-The cryogenic system is build such that replacing the cryo-cooler type 
+one side and to the detector part on another side. 
+The cryogenic system is built such that replacing the cryo-cooler type 
 (e.g., to PTR) requires just an adaptation to the top flange.
 
 
-The system is made of two chambers, the outer vessel (OV) which holds 
-the insulation vacuum, and the inner vessel (IV) that holds the xenon. In addition to the vacuum which prevents heat leakage due to diffusion and convection, the entire IV is covered by multi layer aluminized Myler to prevent heating via radiation. The CAD view of 
-the design of the cryogenic system and a photo of the actual system are shown in Fig~\ref{fig:cryo}. 
+The cryogenic system is made of two vessels, the outer vessel (OV) which holds 
+the insulation vacuum, and the inner vessel (IV) which holds the xenon. In addition to the vacuum which prevents heat leakage due to diffusion and convection, the entire IV is covered by multi layer aluminized Myler to prevent heating via radiation.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
@@ -118,24 +121,20 @@ The cryogenic system. (Left) CAD design view,
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The OV is made of a 10" Conflat (CF) cube, with ports on all six faces (e.g., FT, pumping ports, 
-view ports). This vacuum is shared with the detector one via a 6" CF flexible bellows.
-The IV is made of 1.5" height cylinder with 6" CF flanges on the top and bottom parts of it, 
-and it holds xenon inside. A 120~\,mm diameter cold finger is welded to the top flange of the IV, 
-the inner part of the cold finger is made of long fins, therefore the surface area of it is bigger 
-resulting in a better heat transport. The design of the cold finger is similar to the design 
-of~\cite{xe100_instr2012}. The upper part of the cold finger is in thermal contact with the 
+The OV is made of a 10" Conflat (CF) cube, with ports on all six faces, interfacing the gas handling system and  the detector part, as well as bearing service ports (e.g., feed-throughs, pumping ports, 
+view ports). The OV is connected to the detector part via a 6" CF flexible bellows, providing a shared vacuum.
+
+The IV is made of 1.5" long cylinder with 6" CF flanges on both sides, holding xenon within. A 120~\,mm diameter cold finger is welded its top flange. The design of the cold finger is similar to the one in~\cite{xe100_instr2012}. The inner part of the cold finger is made of long fins, resulting in a better heat transport.  The upper part of the cold finger is in thermal contact with the 
 cryo-cooler~\footnote{QDrive 20BB 9p6 A 3 AYNBNCO} via a copper adapter. The copper adapter 
 holds two $100\Omega$ pt resistor which are connected to a PID reader\footnote{cryo-con model 
 18i Cryogenic Temp Monitor} for temperature measurements. A cartridge-heater 
 is also inserted to the copper adapter for emergency heating in case xenon freezes on the 
 cold finger. 
 
-The cryo-cooler provides up to 70 W of cooling power, and is connected via a $4\frac{1}{2}$" 
-flange to the OV top flange, and reaching the IV top flange. The common cryo-coolers used for 
-xenon experiments work in maximal cooling mode permanently. The QDrive, instead, has 
-temperature control allowing it vary the cooling power, which enables to set the temperature 
-with fluctuations smaller then $0.1~\mathrm{^{\circ}C}$ on the cooler itself.
+The cryo-cooler is connected via a $4\frac{1}{2}$" 
+flange to the OV top flange. While usually cryo-coolers used for 
+xenon experiments constantly operate in maximal cooling, the QDrive utilizes a 
+temperature control to vary its cooling power up to 70\,W. This allows setting a desired working temperature which is constant within less then $0.1~\mathrm{^{\circ}C}$ measured on the cryo-cooler.
 
 On the inner side of the bottom flange of the IV a thin 0.6~mm SS funnel is installed 
 collecting all LXe drops from the cold finger, and delivering them to the  detector part. 
@@ -145,7 +144,8 @@ from the funnel. All three pipes deliver LXe whereas the GXe is filling the bell
 separation between the LXe coming from the gas handling system (clean) and the LXe coming 
 from the cold finger (more impure) allows the filling of clean LXe to 
 different parts of 
-the detector. 
+the detector. The CAD view of 
+the design of the cryogenic system and a photo of the actual system are shown in Fig~\ref{fig:cryo}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The Detector}
