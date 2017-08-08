@@ -1,19 +1,17 @@
-\subsection{The DAQ System }
+\subsection{The data acquisition system }
 \label{sec:DAQ}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %by MMdevi. Last modified July 2, 2017.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The DAQ system consists of a heterogeneous system with both 
-NIM and VME electronics modules, with the data readout being carried out 
-through an optical link via a VME controller\footnote{CAEN V2718} and a 
-PCIe card \footnote{CAEN A3818}. 
+The DAQ system is heterogeneous with both 
+NIM and VME electronics modules. The data readout is being carried out through a PCIe card \footnote{CAEN A3818}  connected to a VME controller\footnote{CAEN V2718} via an optical link. 
 
-The schematic layout of the DAQ system is shown in Fig.~{\ref{Fig:DAQscheme}}. 
-The PMTs are ramped up to +800V (the maximum is +900V) using a 24 channel VME high 
+A schematic layout of the DAQ system is shown in Fig.~{\ref{Fig:DAQscheme}}. 
+The PMTs are ramped up to +800V (the maximum is +900V) using a 24 channel VME high voltage distributor module \footnote{iseg VDS18130p : 24 independent channels with positive polarity}. 
 The raw electrical pulse output of the PMTs are denoted as S{\it i}(raw), where {\it i} = 1 -- 20. 
-These raw pulses are then amplified and shaped using two photomultiplier preamplifiers 
+These raw pulses are then amplified and shaped using two PMT preamplifiers 
 \footnote{Phillips 776. 16 independent and direct-coupled amplifiers channels}. 
 The preamplifier channels operates from DC to 275 MHz and produce two identical 
 50 $\Omega$ non inverting FIFO outputs with voltage gains of 10. 
@@ -33,20 +31,20 @@ digital signal with an Analog to Digitizer converter \footnote{CAEN ADC V1742: S
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The schematic layout 
-of the DAQ system is shown in Fig.~{\ref{Fig:DAQscheme}}. All the 20 PMTs 
-are oriented in the holder assembly which was discussed in section \ref{subsubsec:sphere}. 
-The PMTs are ramped up to +800V (the maximum is +900V) using a 24 channel 
-VME high voltage distributor module \footnote{iseg VDS18130p : 24 independent channels with positive polarity}.  
-The raw electrical pulse output of the PMTs are defined as S{\it i} (raw), where {\it i} = 1 -- 20. 
-These raw pulses are then 
-amplified and shaped using two photomultiplier preamplifiers \footnote{Phillips 776: 16 independent  and direct-coupled 
-amplifiers channels}. The preamplifier channels operates from DC to 275 MHz and 
-produce two identical 50 $\Omega$ non inverting outputs with voltage gains of 10. 
-The amplified pulses as defined as S{\it i}, ({\it i} = 1 -- 20). One out of the 
-two identical analog outputs from each channel is converted to a digital 
-signal with an Analog to Digitizer converter \footnote{CAEN ADC V1742: 
-32 channel switched capacitor Digitizer}. 
+%The schematic layout 
+%of the DAQ system is shown in Fig.~{\ref{Fig:DAQscheme}}. All the 20 PMTs 
+%are oriented in the holder assembly which was discussed in section \ref{subsubsec:sphere}. 
+%The PMTs are ramped up to +800V (the maximum is +900V) using a 24 channel 
+%VME high voltage distributor module \footnote{iseg VDS18130p : 24 independent channels with positive polarity}.  
+%The raw electrical pulse output of the PMTs are defined as S{\it i} (raw), where {\it i} = 1 -- 20. 
+%These raw pulses are then 
+%amplified and shaped using two photomultiplier preamplifiers \footnote{Phillips 776: 16 independent  and direct-coupled 
+%amplifiers channels}. The preamplifier channels operates from DC to 275 MHz and 
+%produce two identical 50 $\Omega$ non inverting outputs with voltage gains of 10. 
+%The amplified pulses as defined as S{\it i}, ({\it i} = 1 -- 20). One out of the 
+%two identical analog outputs from each channel is converted to a digital 
+%signal with an Analog to Digitizer converter \footnote{CAEN ADC V1742: 
+%32 channel switched capacitor Digitizer}. 
 
 
 The ADC consists of two 12bit 5GS/s Switched capacitor Digitizer sections, 
