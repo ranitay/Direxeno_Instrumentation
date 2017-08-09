@@ -7,19 +7,22 @@
 %Comment: The detector section has been modified. MMdevi's changes are made in blue
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In order to identify superradiance effects in LXe, the temporal and spatial properties of a scintillation event should be studied and quantified. In the DIREXENO system LXe is circulated through a small spherical cavity held in a thick high purified fused silica (HPFS) sphere . The sphere is surrounded (4$\pi$) by PMTs allowing a high resolution spatial and temporal measurements of individual photons. The PMTs and wires do not come in contact with the xenon, so less impurities are introduced to it, and the material selection is less stringent. The geometrical design of the system simulates a point like source of scintillation photons, and a detailed vertex reconstruction within the LXe drop is unnecessary.  (see fig xxx). 
+In order to identify superradiance effects in LXe, the temporal and spatial properties of a scintillation event should be studied and quantified. In the DIREXENO system LXe is circulated through a small spherical cavity held in a thick high purified fused silica (HPFS) sphere . The sphere is surrounded (4$\pi$) by PMTs allowing a high resolution spatial and temporal measurements of individual photons. The PMTs and wires do not come in contact with the xenon, so less impurities are introduced to it, and the material selection is less stringent. The geometrical design of the system simulates a point like source of scintillation photons, and a detailed vertex reconstruction within the LXe drop is unnecessary. A schematic view of the system is shown in Fig~\ref{fig:detSch} . 
 
-
+\begin{figure}[h]
+\centerline{\includegraphics[width=0.8\linewidth]{DetSch.pdf}}
+\caption{A schematic view of DIREXENO.}
+\label{fig:detSch}
+\end{figure}
 
 
 The current system is designed with \RanComment{TODO check digitzation time} $\sim1$\,ns time resolution, $<1$\,ns synchronization between PMTs, and XX radians spatial resolution. Since the exact nature and magnitude of superradiance in LXe is yet unknown a guiding principle in the design was flexibility to upgrades or redesign of any part of the system to fulfill any future experiment requirements. In addition we gain fast and easy recovery in case of components malfunction. This is achieved by a modular design. 
 
-Four main building blocks constitute the system. (i) \textbf{The gas handling system} which in normal working mode circulates the xenon through the \RanComment{setup} and  purifies it. (ii) \textbf{The cryogenic system}, liquefies the xenon and 
+Four main building blocks constitute the system. (i) \textbf{The gas handling system} which in normal working mode circulates the xenon through the setup and  purifies it. (ii) \textbf{The cryogenic system}, liquefies the xenon and 
 delivers it to the detector system. (iii) \textbf{The detector system} consists of a fused silica sphere that 
 holds a small bubble of LXe target, and PMTs around the sphere. (iv) \textbf{The DAQ system} supplies high voltage (HV) 
 to the PMTs and the handles monitoring, triggering and digitization. The entire assembly is held on 3 separate racks as shown in Fig.~\ref{fig:fulldet}.
  
-The full assembly, shown in Fig.~\ref{fig:fulldet}, is held on three separate racks, joined using a bar with shock absorbers on both sides. 
 
 %The experimental setup of DIREXENO is described in this section. This setup is  designed to measure the spatial and temporal properties of LXe scintillation. It consists of a modular design in order to extend its flexibility to fulfill the requirement of any different future experiments. 
 
@@ -52,7 +55,6 @@ The full assembly, shown in Fig.~\ref{fig:fulldet}, is held on three separate ra
 
 \subsection{The gas handling system}
 \label{subsec:gas}
-\RanComment{I think it is not important to state the pipes are made from SS 1/4" and the safety valve}
 
 In DIREXENO only the prompt scintillation is measured, therefore a high level of purity is not of a great importance. However in many LXE detectors the desired level of impurity concentration is at the level of 1 ppb $O_2$ equivalent~\cite{Aprile:2009dv}
 %While in DIREXENO a high level of purity is not of a great importance as only the prompt scintillation is measured, in many LXE detectors the desired level of impurity concentration is at 
@@ -85,7 +87,6 @@ a valve with an arrow.}
 
 \subsection{The cryogenic system}
 \label{subsec:cryo}
-\RanComment{revisit this paragraph}
 
 Remote cooling is generally used in LXe experiments due to reduction in background radiation and acoustic noise from the cooler to the detector, and due to design flexibility. The cryogenic system is connected to the gas handling system on 
 one side and to the detector part on the other, and built such that replacing the cryo-cooler type (e.g., to PTR) requires just an adaptation to the top flange.
@@ -163,7 +164,6 @@ apparatus is 190~\,cm, allowing an easy transport of the detector through standa
 The $4\frac{5}{8}$" CF flange is connected to a split vessel that serves as a LXe reservoir. one part is connected 
 to the HPFS sphere from above, and one from below. LXe is circulated such that new LXe drips into the one part and pumped from the other to the gas handling system. This controls the liquid level, and the sphere is constantly filled with LXe. 
 
-\RanComment{The central component of the detector assembly Move to begining} 
 
 The sphere is a custom designed hollow shell made of Corning HPFS 8655 with high transmittance to VUV. Two invar tubes with SS mini-CF flange are connected to the sphere on both sides. The technical design and image of the sphere are shown in Fig.~\ref{fig:sphere}. The optical properties of the sphere will be further discussed in~\ref{sec:opt} 
 The bottom flange of the sphere is held using a brass holder to prevent 
