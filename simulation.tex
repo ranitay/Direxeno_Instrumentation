@@ -1,66 +1,103 @@
-\section{Simulation}
+\section{Detector sensitivity}
 \label{sec:sim}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-A GEANT4 based simulation is performed to asses the sensitivity of the detector to identify 
-an emission pattern. Several test emission patterns are used to simulate the propagation of the 
-photons through the setup and obtain the hit patterns at the PMTs. The photons detected at the 
-PMTs are mapped and put through a statistical test to check the detector's sensitivity towards 
-those patterns.
+The detector's sensitivity is estimated by its ability to identify an anisotropic component in the scintillation photons emission pattern (signal), over the isotropic one (background). The photon emission pattern is modeled using a combination of isotropic emission and one or two beams:
+\begin{equation}
+\mathcal{F}(\theta,\phi) = (1-r_{aniso}) \cdot f_{iso} + r_{aniso}\cdot\left[r_1 f_G(\sigma_1) + r_2 f_G(\sigma_2) \right], 
+\end{equation}  
+where  $f_{iso}$ is the PDF of an isotropic emission, $f_G$ is a PDF of a Gaussian distribution with half width $\sigma$. $r_{aniso}$ is the anisotropic emission fraction, and $r_{1/2}$ are the relative beams intensities. The first beam direction is random, and the second's is either random 
+(''uncorrelated``) or opposite to the first's (''correlated``). The different emission patterns used here are summarized in Table~\ref{tab:AnisoPattern}.
+ 
+\begin{table}[h]
+  \centering
+  \caption{Anisotropic emission patterns. For all patterns $r_{aniso}$ = 0.1}
+  \label{tab:AnisoPattern}
+  \begin{tabular}{|c |c |c|cc|cc|}
+  \hline
+  Pattern no. & No. of beams & type & \multicolumn{2}{c|}{Beam half widths}& \multicolumn{2}{c|}{Signal fractions} \\
+ % \hline
+  &              &      &  $\sigma_1$ & $\sigma_2$   &  $r_1$ & $r_2$    \\
+  \hline
+  1 & 1 & single beam & $5^{0}$ & - & 1 & 0\\
+  %\hline
+   2 & 1 & single beam & $15^{0}$ & - & 1 & 0\\
+  %\hline
+   3 & 2 & correlated & $5^{0}$ & $5^{0}$ & 0.5 & 0.5  \\
+  %\hline
+   4 & 2 & correlated & $15^{0}$ & $15^{0}$ & 0.5 & 0.5 \\
+  %\hline
+   5 & 2 & uncorrelated & $5^{0}$ & $5^{0}$ & 0.5 & 0.5 \\
+  %\hline
+   6 & 2 & uncorrelated & $5^{0}$ & $10^{0}$ & 0.5 & 0.5 \\
+  %\hline
+   7 & 2 & uncorrelated & $15^{0}$ & $15^{0}$ & 0.5 & 0.5 \\
+  %\hline
+   8 & 2 & uncorrelated & $10^{0}$ & $30^{0}$ & 0.5 & 0.5 \\
+  %\hline
+   9 & 2 & uncorrelated & $10^{0}$ & $30^{0}$ & 0.2 & 0.8 \\
+  %\hline
+    10 & 2 & uncorrelated & $30^{0}$ & $10^{0}$ & 0.2 & 0.8 \\
+  \hline
+ \end{tabular}
+\end{table} 
+ 
+ 
 
-The important geometrical and optical parameters, which are used in the simulation, 
-are listed in Table~\ref{tab:OptPar}. The probability for a photon being 
-transmitted/reflected at a given surface is 
+A GEANT4 based simulation is used to model the detector system, generate photons, propagate them through the detector, and obtain a PMT hit pattern. The photons detected at the 
+PMTs are mapped and put through a statistical test to check the detector's sensitivity towards the different emission patterns.
+
+The relevant geometrical and optical parameters, which are used in the simulation, are listed in Table~\ref{tab:OptPar}. 
+The scintillation light produced in a particular 
+event is emitted by a cloud of excimers. This cloud is assumed to have a linear size much smaller than that 
+of the optical system. Therefore each event is simulated as a number of photons that are emitted from a point 
+in the LXe with some emission pattern (see Table~\ref{tab:AnisoPattern}). The number of generated photons for each event is taken to be Poisson(50), which correspond to an energy deposition of $\sim2.5\mathrm{keV}$  or $\sim7\mathrm{keV}$ for ER or NR respectively. The LXe target is much smaller than the mean free path of the source particles, and to 
+account for that the events are uniformly generated in the LXe volume.
+The probability for a photon being transmitted/reflected at a given surface is 
 determined by Fresnel's equations, which include Snell's law for the transmitted light, 
 and specular reflection for the reflected light. The boundary surfaces between different media
 such as, the LXe--HPFS, HPFS--vacuum and vacuum--PMT, are assumed to be perfectly smooth, 
 therefore enabling only specular reflection. 
 The photons reaching the PMTs can either be detected, absorbed or reflected from the photocathode 
-or from the PMT window. A simplified approach of the above possibilities is considered:
-a photon reaching the PMT is considered 30\% probability to be detected (since the PMTs have QE $\geq$ 30\%), 
+or PMT window. A simplified approach of the above possibilities is considered:
+a photon reaching the PMT has a 30\% probability to be detected (since the PMTs have QE $\geq$ 30\%), 
 50\% probability to get absorbed and 20\% probability to get specularly reflected. 
-The scintillation light produced in a particular 
-event is emitted by a cloud of excimers. This cloud is assumed to have a linear size much smaller than that 
-of the optical system. Therefore each event is simulated as a number of photons that are emitted from a point 
-in the LXe. The LXe target is much smaller than the mean free path of the source particles, and to 
-account for that the events are uniformly generated in the LXe volume.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[h]
   \centering
   \caption{The parameters used in simulation}
   \label{tab:OptPar}
-  \begin{tabular}{|c c||c c|}
+  \begin{tabular}{|l c||l c|}
   \hline
   Parameter & Value & Parameter & Value \\
   \hline
-  LXe absorption length & 100 cm & No. of PMT & 20\\
+  LXe absorption length & 100 cm & HPFS shell inner radius & 1cm \\
   %\hline
-  LXe scattering length & 35 cm & PMT active area & 22mm $\times$ 22mm\\
+  LXe scattering length & 35 cm & HPFS shell thickness & 2 cm\\
   %\hline
-  HPFS absorption length & 100 cm & PMT QE & $\geq$ 30\% \\
+  LXe refractive index & 1.61  & PMT QE &  30\% \\
  % \hline
-  HPFS scattering length & $\infty$ & PMT distance from centre & 39 mm\\
+  LXe Scintillation wavelength & 178& PMT distance from center & 39 mm\\
  % \hline
-  LXe refractive index & 1.61 & LXe bubble radius & 1cm\\
+  HPFS absorption length & 100 cm  & Number of PMT & 20 \\
   %\hline
-  HPFS refractive index & 1.57 & HPFS shell thickness & 2 cm \\
-  Scintillation wavelength & 178 $\pm$ 14 nm & Invar tube diameter & 1 mm\\
+  HPFS refractive index & 1.57 & PMT active area & 22mm $\times$ 22mm \\
+  HPFS scattering length & $\infty$ & Invar tube diameter & 1 mm\\
   \hline
  \end{tabular}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In each event the exact number of photons falling on a PMT as well as the exact position 
-on the photocathode which the photons hit are not known . The statistical fluctuation 
+
+The statistical fluctuation 
 in the electronic signal generated in a PMT for a certain number of incident photon is 
-taken into account. The simulation is performed for both 
-ideal photon counting and statistical photon counting. The R8520 PMTs also has  ~20\% probability 
-for double photoelectric emission for 178 nm photons, which is also included in the simulation.
+taken into account. The R8520 PMTs have 20\% probability 
+for double photoelectric emission for 178 nm photons, which is included in the simulation.
 Each detected photon on a PMT is assigned a uniformly random position on the PMT surface. 
 The direction of this point with respect 
 to the center of the LXe sphere is defined as the incident direction of the photon. The direction information 
 is then used to calculate the angles between all possible pairs of photon for any event and 
-calculate the correlation between all angle pairs.
+calculate the correlation between all angle pairs. \RanComment{Add fig of correlstions iso and aniso}
 
 In order to quantify the anisotropicity of the emission, 
 the angle correlation distribution of an anisotropic hit pattern is compared to that of the isotropic 
@@ -71,8 +108,8 @@ pattern. A $\chi^2$ test statistics is used where the reduced $\chi^2$ is define
 \label{redchi2}
 \end{equation}
 
-where $E_i$ is the pdf of an isotropic emission obtained from a sample of $10^5$ simulated events. 
-$O_i$ is the pdf of the anisotropic emission, and $\nu$ is the total number of angle correlation bins 
+where $E_i$ is the expected number of entries for an isotropic emission obtained from a sample of $10^5$ simulated events. 
+$O_i$ is the observed number of entries, and $\nu$ is the total number of angle correlation bins 
 which is also the degree of freedom. Sixty bins of identical width are used.
 
 
@@ -92,63 +129,16 @@ which is also the degree of freedom. Sixty bins of identical width are used.
 %60 bins of identical width are used. 
 
 
-The anisotropic emission patterns used in the analysis are listed 
-in Table~\ref{tab:AnisoPattern}. For each emission pattern,  an anisotropic pattern is taken to be embedded 
-in an isotropic background. The anisotropic pattern contains  
-10\% of the net photons (the fraction of anisotropic signal is denoted by $r_{aniso}$),
-while the rest form the isotropic background. For 
-multiple beams in a pattern $r_{aniso}$ is split among them 
-as mentioned in the Table. The intensity of the beams of photons are of 
-Gaussian nature, and their emission direction are 
-randomly varied in each event.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[h]
-  \centering
-  \caption{Emission patterns. For all patterns $r_{aniso}$ = 0.1 from a 
-  total of 50 photon/event.}
-  \label{tab:AnisoPattern}
-  \begin{tabular}{|c |c |c|cc|cc|}
-  \hline
-  Pattern no. & No. of beams & type & \multicolumn{2}{c|}{Beam half widths}& \multicolumn{2}{c|}{Signal fractions} \\
- % \hline
-  &              &      &  $\sigma_1$ & $\sigma_2$   &  $r_1$ & $r_2$    \\
-  \hline
-  1 & 1 & & $5^{0}$ & & 1 & \\
-  %\hline
-   2 & 1 & & $15^{0}$ & & 1 & \\
-  %\hline
-   3 & 2 & correlated & $5^{0}$ & $5^{0}$ & 0.5 & 0.5  \\
-  %\hline
-   4 & 2 & correlated & $15^{0}$ & $15^{0}$ & 0.5 & 0.5 \\
-  %\hline
-   5 & 2 & uncorrelated & $5^{0}$ & $5^{0}$ & 0.5 & 0.5 \\
-  %\hline
-   6 & 2 & uncorrelated & $5^{0}$ & $10^{0}$ & 0.5 & 0.5 \\
-  %\hline
-   7 & 2 & uncorrelated & $15^{0}$ & $15^{0}$ & 0.5 & 0.5 \\
-  %\hline
-   8 & 2 & uncorrelated & $10^{0}$ & $30^{0}$ & 0.5 & 0.5 \\
-  %\hline
-   9 & 2 & uncorrelated & $10^{0}$ & $30^{0}$ & 0.2 & 0.8 \\
-  %\hline
-    10 & 2 & uncorrelated & $30^{0}$ & $10^{0}$ & 0.2 & 0.8 \\
-  \hline
- \end{tabular}
-\end{table}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-A number of data sets generated with different random seeds are 
-generated to obtain the 2$\sigma$ fluctuation on <$\chi^2/\nu$>. The <$\chi^2/\nu$> 
+To asses the needed exposure to claim discovery assuming one of the   pattern mentioned above, $10^4$ data sets are generated and tested against the null hypothesis. This is repeated for increasing number of events between $1-4000$. The <$\chi^2/\nu$> 
 and its 2$\sigma$ band for pattern 1 overlaid with the corresponding values 
-for an isotropic emission are shown in Fig.~\ref{fig:pattern1}. The <$\chi^2/\nu$> for 
-isotropic emission fluctuate around 1 with $\sigma$ = 0.2 which is consistent with 
-the expected value of $\frac{1}{\sqrt{30}} \equiv 0.18$ for reduced $\chi^2$ distribution 
-with 60 degrees of freedom. The number of events 
-$N^{'}$ which is required to achieve <$\chi^2/\nu$> = 2.1, i.e., 5$\sigma$ from the 
-band of isotropic emission is set as the pattern distinction criteria. The values of 
-$N^{'}$ for all the emission patterns (see Table~\ref{tab:AnisoPattern}) are shown 
-in the left panel of Fig.~\ref{fig:convergence}. The values of $N^{'}$, when the fraction of anisotropic 
+for an isotropic emission are shown in Fig.~\ref{fig:pattern1}.  The number of events 
+$N^{'}$ which is required to achieve <$\chi^2/\nu$> = 2.1, i.e., 5$\sigma$ is estimated for each pattern and shown in Fig~\ref{tab:AnisoPattern}) in the left panel of Fig.~\ref{fig:convergence}. The values of $N^{'}$, when the fraction of anisotropic 
 emission is varied for pattern 1 and pattern 9, are shown in the right panel of Fig.~\ref{fig:convergence}. 
 
 A simulation with two typical sources that emit uniformly in 4$\pi$, a 10 $\mu$Ci $^{137}Cs$ $\gamma$ 
@@ -162,9 +152,10 @@ is expected to do reasonable measurements for ER and NR events.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
 \centerline{\includegraphics[width=0.5\linewidth]{Pattern1.pdf}}
-\caption{<$\chi^2/\nu$> and its $2\sigma$ band for isotropic emission (black) and for pattern 1 (red). 
-The number of events needed to discriminate the pattern is defined as that for which 
-the $2\sigma$ band crosses <$\chi^2/\nu$> = 2.1, i.e., $5\sigma$ away from the <$\chi^2/\nu$> for isotropy. }
+\caption{<$\chi^2/\nu$> and its $2\sigma$ band for isotropic emission (black) and for pattern 1 (red). The <$\chi^2/\nu$> for 
+isotropic emission fluctuate around 1 with $\sigma$ = 0.2 which is consistent with 
+the expected value of $\frac{1}{\sqrt{30}} \equiv 0.18$ for reduced $\chi^2$ distribution 
+with 60 degrees of freedom.}
 \label{fig:pattern1}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
