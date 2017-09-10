@@ -1,42 +1,42 @@
 \section{Detector sensitivity}
 \label{sec:sim}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The detector's sensitivity is estimated by its ability to identify an anisotropic component in the scintillation photons emission pattern (signal), over the isotropic one (background). The photon emission pattern is modeled using a combination of isotropic emission and one or two beams:
+The sensitivity of the detector is estimated by its ability to identify an anisotropic component in the scintillation photons emission pattern (signal), over the isotropic one (background). The photon emission pattern is modeled using a combination of isotropic emission and one or two beams:
 \begin{equation}
 \mathcal{F}(\theta,\phi) = (1-r_{aniso}) \cdot f_{iso} + r_{aniso}\cdot\left[r_1 f_G(\sigma_1) + r_2 f_G(\sigma_2) \right], 
 \end{equation}  
-where  $f_{iso}$ is the PDF of an isotropic emission, $f_G$ is a PDF of a Gaussian distribution with half width $\sigma$. $r_{aniso}$ is the anisotropic emission fraction, and $r_{1/2}$ are the relative beams intensities. The first beam direction is random, and the second's is either random 
+where  $f_{iso}$ is the PDF of an isotropic emission, $f_G$ is a PDF of a Gaussian distribution with half width $\sigma$. $r_{aniso}$ is the anisotropic emission fraction, and $r_{1,2}$ are the relative beams intensities. The first beam direction is random, and the second's is either random 
 (''uncorrelated``) or opposite to the first's (''correlated``). The different emission patterns used here are summarized in Table~\ref{tab:AnisoPattern}.
  
 \begin{table}[h]
   \centering
   \caption{Anisotropic emission patterns. For all patterns $r_{aniso}$ = 0.1}
   \label{tab:AnisoPattern}
-  \begin{tabular}{|c |c |c|cc|cc|}
+  \begin{tabular}{|c |c |c|cc|cc|c|}
   \hline
-  Pattern no. & No. of beams & type & \multicolumn{2}{c|}{Beam half widths}& \multicolumn{2}{c|}{Signal fractions} \\
+  Pattern no. & No. of beams & type & \multicolumn{2}{c|}{Beam half widths}& \multicolumn{2}{c|}{Signal fractions} & $N^{'}$ \\
  % \hline
-  &              &      &  $\sigma_1$ & $\sigma_2$   &  $r_1$ & $r_2$    \\
+  &              &      &  $\sigma_1$ & $\sigma_2$   &  $r_1$ & $r_2$ &   \\
   \hline
-  1 & 1 & single beam & $5^{0}$ & - & 1 & 0\\
+  1 & 1 & single beam & $5^{0}$ & - & 1 & 0 & 3200\\
   %\hline
-   2 & 1 & single beam & $15^{0}$ & - & 1 & 0\\
+   2 & 1 & single beam & $15^{0}$ & - & 1 & 0 & 4630\\
   %\hline
-   3 & 2 & correlated & $5^{0}$ & $5^{0}$ & 0.5 & 0.5  \\
+   3 & 2 & correlated & $5^{0}$ & $5^{0}$ & 0.5 & 0.5 &  4520  \\
   %\hline
-   4 & 2 & correlated & $15^{0}$ & $15^{0}$ & 0.5 & 0.5 \\
+   4 & 2 & correlated & $15^{0}$ & $15^{0}$ & 0.5 & 0.5 & 9770  \\
   %\hline
-   5 & 2 & uncorrelated & $5^{0}$ & $5^{0}$ & 0.5 & 0.5 \\
+   5 & 2 & uncorrelated & $5^{0}$ & $5^{0}$ & 0.5 & 0.5 & 9370\\
   %\hline
-   6 & 2 & uncorrelated & $5^{0}$ & $10^{0}$ & 0.5 & 0.5 \\
+   6 & 2 & uncorrelated & $5^{0}$ & $10^{0}$ & 0.5 & 0.5 & 19500\\
   %\hline
-   7 & 2 & uncorrelated & $15^{0}$ & $15^{0}$ & 0.5 & 0.5 \\
+   7 & 2 & uncorrelated & $15^{0}$ & $15^{0}$ & 0.5 & 0.5 & 28200\\
   %\hline
-   8 & 2 & uncorrelated & $10^{0}$ & $30^{0}$ & 0.5 & 0.5 \\
+   8 & 2 & uncorrelated & $10^{0}$ & $30^{0}$ & 0.5 & 0.5 & 49900\\
   %\hline
-   9 & 2 & uncorrelated & $10^{0}$ & $30^{0}$ & 0.2 & 0.8 \\
+   9 & 2 & uncorrelated & $10^{0}$ & $30^{0}$ & 0.2 & 0.8 & 56000\\
   %\hline
-    10 & 2 & uncorrelated & $30^{0}$ & $10^{0}$ & 0.2 & 0.8 \\
+    10 & 2 & uncorrelated & $30^{0}$ & $10^{0}$ & 0.2 & 0.8 & 43000\\
   \hline
  \end{tabular}
 \end{table} 
@@ -97,14 +97,14 @@ Each detected photon on a PMT is assigned a uniformly random position on the PMT
 The direction of this point with respect 
 to the center of the LXe sphere is defined as the incident direction of the photon. The direction information 
 is then used to calculate the angles between all possible pairs of photon for any event and 
-calculate the correlation between all angle pairs. \RanComment{Add fig of correlstions iso and aniso}
+calculate the correlation between all angle pairs. \RanComment{Do you want to add fig of correlations iso and aniso?}
 
 In order to quantify the anisotropicity of the emission, 
 the angle correlation distribution of an anisotropic hit pattern is compared to that of the isotropic 
 pattern. A $\chi^2$ test statistics is used where the reduced $\chi^2$ is defined as: 
 
 \begin{equation}
-\chi^2/\nu = \frac{1}{\nu} \sum^{\nu}_{i=1} \frac{(O_i - E_i)^2}{E_i},
+\chi^2_\nu = \frac{1}{\nu} \sum^{\nu}_{i=1} \frac{(O_i - E_i)^2}{E_i},
 \label{redchi2}
 \end{equation}
 
@@ -113,49 +113,25 @@ $O_i$ is the observed number of entries, and $\nu$ is the total number of angle 
 which is also the degree of freedom. Sixty bins of identical width are used.
 
 
+To asses the needed exposure to claim discovery assuming one of the   pattern mentioned above, $10^4$ data sets are generated and tested against the null hypothesis. This is repeated for increasing number of events between $1-4000$ assuming different values of the anisotropy fraction ($r_{aniso}$). The <$\chi^2_\nu$> 
+and its 2$\sigma$ band for pattern 1, assuming $r_{aniso} =0.1$ overlaid with the corresponding values  for an isotropic emission are shown in Fig.~\ref{fig:pattern1}.  
+The values of $N^{'}$, required to claim $5\sigma$ discovery, for different values of $r_{aniso}$ are calculated for each pattern as illustrated in Fig.~\ref{fig:convergence}.
+The number of events 
+$N^{'}$ for $r_{aniso} =0.1$ are summarized in Table~\ref{tab:AnisoPattern} for all emission patterns.
 
-%In order to test the emission pattern, the angle correlation distribution of a large sample ($10^5$ events) 
-%from isotropic emission is considered as the PDF of the null hypothesis and is compared 
-%to that of a number of smaller samples ($10^4$ events) from different types of anisotropic emissions. 
-%The reduced $\chi^2$ for each sample is calculated as follows.
-%
-%\begin{equation}
-%\chi^2/\nu = \frac{1}{\nu} \sum^{\nu}_{i=1} \frac{(O_i - E_i)^2}{E_i}
-%\label{redchi2}
-%\end{equation}
-%
-%where, $O_i$ is the observed count in the $i^{th}$ angle bin, $E_i$ is the expected count in the $i^{th}$ 
-%angle bin and $\nu$ is the total number of angle bins which is also the degree of freedom. In this analysis, 
-%60 bins of identical width are used. 
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-To asses the needed exposure to claim discovery assuming one of the   pattern mentioned above, $10^4$ data sets are generated and tested against the null hypothesis. This is repeated for increasing number of events between $1-4000$. The <$\chi^2/\nu$> 
-and its 2$\sigma$ band for pattern 1 overlaid with the corresponding values 
-for an isotropic emission are shown in Fig.~\ref{fig:pattern1}.  The number of events 
-$N^{'}$ which is required to achieve <$\chi^2/\nu$> = 2.1, i.e., 5$\sigma$ is estimated for each pattern and shown in Fig~\ref{tab:AnisoPattern}) in the left panel of Fig.~\ref{fig:convergence}. The values of $N^{'}$, when the fraction of anisotropic 
-emission is varied for pattern 1 and pattern 9, are shown in the right panel of Fig.~\ref{fig:convergence}. 
-
-A simulation with two typical sources that emit uniformly in 4$\pi$, a 10 $\mu$Ci $^{137}Cs$ $\gamma$ 
-source (662 keV), and a 2.7 $\mu$Ci AmBe neutron source (5 MeV), shows that for an yield of 
-50photons/event, it would take about about 0.8 days for 
-nuclear recoil (NR) events and 16 days for electron recoil (ER) events to reach a 5$\sigma$ effect. 
+A simulation with two typical sources that emit isotropically, a 10 $\mu$Ci $^{137}Cs$ (662\,keV gamma), and a 2.7 $\mu$Ci AmBe ( 5\,MeV neutron), shows that for an average yield of 
+50photons/event,  the rate of events in the detector is: $1.25\times10^{4}$\,events/day for NR and 625\,events/day for ER. 
 Therefore a system that can operate stably for few weeks 
 is expected to do reasonable measurements for ER and NR events.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
-\centerline{\includegraphics[width=0.5\linewidth]{Pattern1.pdf}}
-\caption{<$\chi^2/\nu$> and its $2\sigma$ band for isotropic emission (black) and for pattern 1 (red). The <$\chi^2/\nu$> for 
+\centerline{\includegraphics[width=0.5\linewidth]{Pattern1.png}}
+\caption{<$\chi^2_\nu$> and its $2\sigma$ band for isotropic emission (black) and for pattern 2 (blue). The <$\chi^2_\nu$> for 
 isotropic emission fluctuate around 1 with $\sigma$ = 0.2 which is consistent with 
 the expected value of $\frac{1}{\sqrt{30}} \equiv 0.18$ for reduced $\chi^2$ distribution 
-with 60 degrees of freedom.}
+with 60 degrees of freedom. $\sim3000$ events are needed to claim  5$\sigma$ discovery ($\chi^2_\nu=2.1$) for this emission pattern}
 \label{fig:pattern1}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -163,12 +139,9 @@ with 60 degrees of freedom.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.45\linewidth]{ConvergenceVsPattern.pdf}
-\hspace{0.1cm}
 \includegraphics[width=0.45\linewidth]{ConvergenceVsRaniso.pdf}
-\caption{(Left) The number of events needed for each emission pattern to cross <$\chi^2/\nu$> = 2.1. Here 
-$r_{aniso}$ = 0.1. (Right) The number of events needed for pattern 1 and pattern 9 to cross <$\chi^2/\nu$> = 2.1 
-for four different values of $r_{aniso}$.}
+\caption{The number of events needed for each emission pattern to achieve $5\sigma$ presented only for pattern 1 and 9. Here 
+$r_{aniso}$ = 0.1. for four different values of $r_{aniso}$.}
 \label{fig:convergence}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
