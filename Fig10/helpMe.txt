@@ -1,0 +1,18 @@
+trial.txt - information for the isotropic lines.
+Fig10.C  - original file from moon moon with data that holds the anisotropic curves data and reads the isotropic information from the file. 
+           HYL made some minor changes to it, including shaded areas creation, and saving the TGraphs to a root file.
+           root script. ".x Fig10.C"
+Fig10.root - holds all the relevant information as TGraphs.
+draw10.c - HYL root macro that reads the information from the root file above and plots the figure .
+
+To use these scripts:
+
+1. If not done already, generate the root file holding the information as TGraphs objects: 
+ root Fig10.C
+2. run the macro to read this root file and make the plot:
+ root draw10.c
+
+Changes to the figures graphics should be made to draw10.c 
+
+
+
