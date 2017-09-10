@@ -7,7 +7,7 @@
 %Comment: The detector section has been modified. MMdevi's changes are made in blue
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In order to identify superradiance effects in LXe, the temporal and spatial properties of a scintillation event should be studied and quantified. In the DIREXENO system LXe is circulated through a small spherical cavity held in a thick high purified fused silica (HPFS) sphere . The sphere is surrounded (4$\pi$) by PMTs allowing a high resolution spatial and temporal measurements of individual photons. The PMTs and wires do not come in contact with the xenon, so less impurities are introduced to it, and the material selection is less stringent. The geometrical design of the system simulates a point like source of scintillation photons, and a detailed vertex reconstruction within the LXe drop is unnecessary. A schematic view of the system is shown in Fig~\ref{fig:detSch} . 
+In order to identify superradiance effects in LXe, the temporal and spatial properties of scintillation events should be studied and quantified. In the DireXeno system LXe is circulated through a small spherical cavity held in a thick high purified fused silica (HPFS) sphere . The sphere is surrounded ($\sim4\pi$) by PMTs allowing high resolution spatial and temporal measurements of individual photons. The PMTs do not come in contact with the xenon, so less impurities are introduced to it, and the material selection is less stringent. The geometrical design of the system simulates a point like source of scintillation photons, and a detailed vertex reconstruction within the LXe bubble is unnecessary. A schematic view of the system is shown in Fig~\ref{fig:detSch} . 
 
 \begin{figure}[h]
 \centerline{\includegraphics[width=0.8\linewidth]{DetSch.pdf}}
@@ -18,10 +18,10 @@ In order to identify superradiance effects in LXe, the temporal and spatial prop
 
 The current system is designed with \RanComment{TODO check digitzation time} $\sim1$\,ns time resolution, less than $1$\,ns synchronization between PMTs, and $\sim8$ radians spatial resolution. Since the exact nature and magnitude of superradiance in LXe is yet unknown a guiding principle in the design was flexibility to upgrades or redesign of any part of the system to fulfill any future experiment requirements. In addition we gain fast and easy recovery in case of components malfunction. This is achieved by a modular design. 
 
-Four main building blocks constitute the system. (i) \textbf{The gas handling system} which in normal working mode circulates the xenon through the setup and  purifies it. (ii) \textbf{The cryogenic system}, liquefies the xenon and 
+Four main building blocks constitute the system. (i) \textbf{The gas handling system} which in normal working mode circulates the xenon and purifies it. (ii) \textbf{The cryogenic system}, liquefies the xenon and 
 delivers it to the detector system. (iii) \textbf{The detector system} consists of a fused silica sphere that 
 holds a small bubble of LXe target, and PMTs around the sphere. (iv) \textbf{The DAQ system} supplies high voltage (HV) 
-to the PMTs and the handles monitoring, triggering and digitization. The entire assembly is held on 3 separate racks as shown in Fig.~\ref{fig:fulldet}.
+to the PMTs and the handles monitoring, triggering and digitization of data. The entire assembly is held on 3 separate racks as shown in Fig.~\ref{fig:fulldet}.
  
 
 %The experimental setup of DIREXENO is described in this section. This setup is  designed to measure the spatial and temporal properties of LXe scintillation. It consists of a modular design in order to extend its flexibility to fulfill the requirement of any different future experiments. 
@@ -56,7 +56,11 @@ to the PMTs and the handles monitoring, triggering and digitization. The entire 
 \subsection{The gas handling system}
 \label{subsec:gas}
 
+<<<<<<< HEAD
 In DIREXENO only the prompt scintillation is measured, therefore a high level of purity is not of a great importance. However in many LXe detectors the desired level of impurity concentration is at the level of 1 ppb $O_2$ equivalent~\cite{Aprile:2009dv}
+=======
+In DIREXENO only the prompt scintillation is measured, and so a high level of purity is not of a great importance. However in many LXE detectors the desired level of impurity concentration is at the level of 1 ppb $O_2$ equivalent~\cite{Aprile:2009dv}
+>>>>>>> 2292d93adb63079752489fa3b355837dcdd54054
 %While in DIREXENO a high level of purity is not of a great importance as only the prompt scintillation is measured, in many LXE detectors the desired level of impurity concentration is at 
 %the level of 1 ppb $O_2$ equivalent~\cite{Aprile:2009dv}. 
 This is crucial to allow 
@@ -67,7 +71,7 @@ with all gas handling operations such as filling and recuperation. The xenon cir
 
 
 During purification, The xenon is forced by a circulation pump\footnote{N143 SN.12E AC 230V50HZ KNF diaphragm circulation pump} extracting LXe from the detector part through a heat exchanger\footnote{GEA GBS100M-24 plate heat exchanger} 
-where it is heated and vaporized, into a hot getter\footnote{MONO-TORR PS4-MT15-R-2} which cleans the xenon. The xenon passes through a mass flow controller\footnote{MKS mass flow controller} (MFC), 
+where it is heated and vaporized, into a hot getter\footnote{MONO-TORR PS4-MT15-R-2} which cleans the xenon. The xenon passes through a mass flow controller\footnote{MKS mass flow controller 1179A00614CR1BM} (MFC), 
 enabling monitoring and controlling the amount of heat introduced to the system.  Once purified, the xenon is delivered back to the cryogenic system 
 via the heat exchanger, where the remaining GXe is 
 liquefied before it continues back to the detector part. A schematic of this 
@@ -93,7 +97,7 @@ one side and to the detector part on the other, and built such that replacing th
 
 
 The cryogenic system is divided to an outer vessel (OV) which holds 
-the insulation vacuum, and an inner vessel (IV) which holds the xenon. In addition to the vacuum which prevents heat leakage due to diffusion and convection, the IV is completely covered by multi layer aluminized Myler to prevent heating via radiation.  
+the insulation vacuum, and an inner vessel (IV) which holds the xenon. \sout{In addition to the vacuum which prevents heat leakage due to diffusion and convection, t}The IV is completely covered by multi layer aluminized Myler to prevent heating via radiation.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
@@ -138,8 +142,8 @@ the design of the cryogenic system and a photo of the actual system are shown in
 \subsection{The detector system}
 \label{subsec:det}
  
-The detector system refers to the chamber and its inner assembly consisting of a transparent sphere that 
-contains the LXe, the photomultiplier sensors observing it and their accessories. This chamber is placed below the cryogenic system. 
+The detector system \RanComment{refers} to a vacuum chamber and its inner assembly consisting of a transparent sphere that 
+contains the LXe, the PMT sensors observing it and their accessories. This chamber is placed below the cryogenic system. 
 
 
 %mmd{I feel 
@@ -152,20 +156,20 @@ contains the LXe, the photomultiplier sensors observing it and their accessories
 %\subsubsection{The Detector Chamber}
 %\label{subsubsec:detchamber}
 
-The interface unit to the cryogenic system is built out of 2 flanges welded together via 7 tubes, which serve as service ports for electrical and other feedthroughs, 4 
-with a $2 \frac{3}{4}/$ CF flange, and 3 with a $1\frac{1}{3}$ CF flange (mini-CF). 
-The upper flange, ISO-K NW320, shares the cryogenic system's OV insulation vacuum, while the bottom one, CF-10", is part of the IV for future detectors, and could hold xenon. 
-In addition the CF flange is adapted to fit a smaller CF-$4\frac{5}{8}$" flange which is currently used.
+The interface unit to the cryogenic system is built out of two flanges welded together via seven tubes, which serve as service ports for electrical and other feedthroughs: four 
+with a $2 \frac{3}{4}/$ CF flange, and three with a $1\frac{1}{3}$ CF flange (mini-CF). 
+The upper flange, ISO-K NW320, shares the cryogenic system's OV insulation vacuum, while the bottom one, CF-10", is part of the IV and could hold xenon for future detectors. 
+The CF flange is also adapted to fit a smaller CF-$4\frac{5}{8}$" flange which is currently used.
 
-The chamber is made of a ISO-K NW320 nipple closed with a blank flange from below, 
+The vacuum chamber is made of an ISO-K NW320 nipple closed with a blank flange from below, 
 the length of the nipple is determined such that the maximal height of the whole 
 apparatus is 190~\,cm, allowing an easy transport of the detector through standard doors.
  
 The $4\frac{5}{8}$" CF flange is connected to a split vessel that serves as a LXe reservoir. one part is connected 
-to the HPFS sphere from above, and one from below. LXe is circulated such that new LXe drips into the one part and pumped from the other to the gas handling system. This controls the liquid level, and the sphere is constantly filled with LXe. 
+to the HPFS sphere from above, and one from below. LXe is circulated such that LXe coming from the gas system drips into one part and pumped from the other. This controls the liquid level, and the sphere is constantly filled with LXe. 
 
 
-The sphere is a custom designed hollow shell made of Corning HPFS 8655 with high transmittance to VUV. Two invar tubes with SS mini-CF flange are connected to the sphere on both sides. The technical design and image of the sphere are shown in Fig.~\ref{fig:sphere}. The optical properties of the sphere will be further discussed in~\ref{sec:opt} 
+The sphere is a custom designed hollow shell made of Corning HPFS 8655 with high transmittance to VUV. Two Invar tubes with SS mini-CF flange are connected to the sphere on both sides. The technical design and photo of the sphere are shown in Fig.~\ref{fig:sphere}. The optical properties of the sphere will be further discussed in Sec.~\ref{sec:opt}. 
 The bottom flange of the sphere is held using a brass holder to prevent 
 force or torque applied on the sphere while mounting it. The 
 brass holder is connected to a plate held from the top CF-10" flange. 
@@ -183,8 +187,8 @@ brass holder is connected to a plate held from the top CF-10" flange.
 \begin{subfigure}[c]{0.25\textheight}
 \includegraphics[width=\textwidth]{spherephoto.png}
 \end{subfigure}
-\caption{(Left)The technical design of the HPFS shell with invar tubing and mini CF flanges. 
-(Right) The industrially manufactured HPFS shell.} 
+\caption{(Left)The technical design of the HPFS shell with Invar tubing and mini CF flanges. 
+(Right) The industrially manufactured HPFS shell, held in a test fixture.} 
 \label{fig:sphere}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -192,8 +196,7 @@ brass holder is connected to a plate held from the top CF-10" flange.
 
 
 Photons emitted from the LXe in the sphere are detected by 20  PMTs\footnote{R8520-406 Hamamatsu 1" PMT, active area 20.5 mm $\times 20.5 mm$}. 
-The PMTs are chosen to have a quantum efficiency greater than 30\% at 178\,nm. The gain of the PMTs is ~ 2 $\times$ 10$^6$ at an applied voltage of 900\,V . A positive voltage divider, 
-manufactured by Hamamatsu, is used to to provide high voltage to the PMTs. 
+The PMTs are chosen to have a quantum efficiency greater than 30\% at 178\,nm. The gain of the PMTs is ~ 2 $\times$ 10$^6$ at an applied voltage of 900\,V . A positive voltage divider\footnote{Hamamatsu VDS18130p 24 channel poisitve polarity.}, is used to to provide high voltage to the PMTs. 
 The PMTs are held with a special aluminum holder, coated with anti-reflection substance. 
 The holder is made of two hemispheres hosting the PMTs in 3 rows all of them pointing to the 
 center of the sphere. The PMTs are attached to the holder by their voltage--divider bases using M2 PEEK screws see Fig~\ref{fig:pmtholder}. 
@@ -229,7 +232,7 @@ detector part, still not connected to the rest of the system.}
 
 %The central component of the detector assembly is a hollow sphere 
 %which holds the LXe bubble. A spherical shell made of Corning HPFS 8655 with high transmittance is 
-%designed to hold the LXe target. Two invar tubes 
+%designed to hold the LXe target. Two Invar tubes 
 %are connected to the HPFS sphere from the top and bottom with 
 %SS mini-CF flanges at the end, which allows circulation of xenon through 
 %the sphere. The technical design and image of the sphere are shown in Fig.~\ref{fig:sphere}. 
@@ -250,7 +253,7 @@ detector part, still not connected to the rest of the system.}
 %\begin{subfigure}[c]{0.25\textheight}
 %\includegraphics[width=\textwidth]{spherephoto.png}
 %\end{subfigure}
-%\caption{(Left)The technical design of the HPFS shell with invar tubing and mini CF flanges. 
+%\caption{(Left)The technical design of the HPFS shell with Invar tubing and mini CF flanges. 
 %(Right) The industrially manufactured HPFS shell.} 
 %\label{fig:sphere}
 %\end{figure}
