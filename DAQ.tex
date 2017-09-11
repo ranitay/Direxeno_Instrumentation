@@ -20,8 +20,7 @@ binary signals using two discriminators\footnote{CAEN V895 16 channel leading ed
 \begin{figure}[h]
    \centering
    \includegraphics[width=0.85\textwidth]{DAQscheme.pdf}
-   \caption{The schematic of the data acquisition system of DireXeno. The signal coming from 20 PMTs ({\it i} = 1 -- 20) and the subsequent electronic channels to record the events once triggered. Where S{\it i}(raw) is the raw electrical pulse output of the PMTs, S{\it i} are the amplified pulses, and SD{\it i} are the binary outputs from the discriminator \RanComment{Why is VME controller in lower box } \mmd{The controller has access to all the VME electronic modules. So it is 
-difficult to put it in the upper box. Collectively, the controller has access to the upper box.}. 
+   \caption{The schematic of the data acquisition system of DireXeno. The signal coming from 20 PMTs ({\it i} = 1 -- 20) and the subsequent electronic channels to record the events once triggered. Where S{\it i}(raw) is the raw electrical pulse output of the PMTs, S{\it i} are the amplified pulses, and SD{\it i} are the binary outputs from the discriminator.
 }
    \label{Fig:DAQscheme}
 \end{figure}
@@ -36,7 +35,7 @@ analog memory buffers. Once triggered, all analog memory
 buffers are frozen and digitized into a digital memory buffer 
 with a 12 bit resolution. The binary output signals from the discriminator are duplicated and fed to 
 the logic module\footnote{CAEN V1495: FPGA based general purpose VME board} and to a scaler\footnote{CAEN V830: 16 channel scalar}. 
-A global majority trigger is generated in the logic module with the coincidence of any two out of the twenty PMTs within a time window of \RanComment{XXX\,ns} \mmd{~100 ns is probably a reasonable limit.}. The event information and trigger rate are read from the ADC, while the individual PMTs trigger rate from the scaler. Further analyses of the relevant events are carried out offline.
+A global majority trigger is generated in the logic module with the coincidence of any two out of the twenty PMTs within a time window of 100\,ns. The event information and trigger rate are read from the ADC, while the individual PMTs trigger rate from the scaler. Further analyses of the relevant events are carried out offline.
 
 
 
