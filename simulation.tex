@@ -1,16 +1,15 @@
 \section{Detector sensitivity}
 \label{sec:sim}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The sensitivity of the detector is estimated by its ability to identify an anisotropic component in the scintillation photons emission pattern (signal), over the isotropic one (background). The photon emission pattern is modeled using a combination of isotropic emission and one or two beams:
+The sensitivity of the detector is estimated by its ability to identify an anisotropic component in the scintillation photons emission pattern (signal), over the isotropic one (background). The photon emission pattern is modeled using a combination of isotropic emission and one or two beams
 \begin{equation}
 \mathcal{F}(\theta,\phi) = (1-r_{aniso}) \cdot f_{iso} + r_{aniso}\cdot\left[r_1 f_G(\sigma_1) + r_2 f_G(\sigma_2) \right], 
 \end{equation}  
 where  $f_{iso}$ is the PDF of an isotropic emission, $f_G$ is a PDF of a Gaussian distribution with half width $\sigma$. $r_{aniso}$ is the anisotropic emission fraction, and $r_{1,2}$ are the relative beams intensities. The first beam direction is random, and the second's is either random 
-(''uncorrelated``) or opposite to the first's (''correlated``). The different emission patterns used here are summarized in Table~\ref{tab:AnisoPattern}.
+(``uncorrelated'') or opposite to the first's (``correlated''). The different emission patterns used here are summarized in Table~\ref{tab:AnisoPattern}.
  
 \begin{table}[h]
   \centering
-  \caption{Anisotropic emission patterns. For all patterns $r_{aniso}$ = 0.1}
   \label{tab:AnisoPattern}
   \begin{tabular}{|c |c |c|cc|cc|c|}
   \hline
@@ -39,12 +38,14 @@ where  $f_{iso}$ is the PDF of an isotropic emission, $f_G$ is a PDF of a Gaussi
     10 & 2 & uncorrelated & $30^{0}$ & $10^{0}$ & 0.2 & 0.8 & 43000\\
   \hline
  \end{tabular}
+   \caption{Anisotropic emission patterns. For all patterns $r_{aniso}$ = 0.1}
+
 \end{table} 
  
  
 
 A GEANT4 based simulation is used to model the detector system, generate photons, propagate them through the detector, and obtain a PMT hit pattern. The photons detected at the 
-PMTs are mapped and put through a statistical test to check the detector's sensitivity towards the different emission patterns.
+PMTs are mapped and put through a statistical test to check the detector's sensitivity towards the different emission patterns~\cite{MaorThesis}.
 
 The relevant geometrical and optical parameters, which are used in the simulation, are listed in Table~\ref{tab:OptPar}. 
 The scintillation light produced in a particular 
@@ -65,7 +66,6 @@ a photon reaching the PMT has a 30\% probability to be detected (since the PMTs 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[h]
   \centering
-  \caption{The parameters used in simulation}
   \label{tab:OptPar}
   \begin{tabular}{|l c||l c|}
   \hline
@@ -85,6 +85,8 @@ a photon reaching the PMT has a 30\% probability to be detected (since the PMTs 
   HPFS scattering length & $\infty$ & Invar tube diameter & 1 mm\\
   \hline
  \end{tabular}
+   \caption{The parameters used in simulation}
+
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -92,36 +94,34 @@ a photon reaching the PMT has a 30\% probability to be detected (since the PMTs 
 The statistical fluctuation 
 in the electronic signal generated in a PMT for a certain number of incident photon is 
 taken into account. The R8520 PMTs have 20\% probability 
-for double photoelectric emission for 178 nm photons, which is included in the simulation.
-Each detected photon on a PMT is assigned a uniformly random position on the PMT surface. 
+for double photoelectron emission for 178 nm photons, which is included in the simulation.
+Each detected photon on a PMT is assigned a uniform position on the PMT surface. 
 The direction of this point with respect 
 to the center of the LXe sphere is defined as the incident direction of the photon. The direction information 
 is then used to calculate the angles between all possible pairs of photon for any event and 
-calculate the correlation between all angle pairs. \RanComment{Do you want to add fig of correlations iso and aniso?} 
-
+calculate the correlation between all angle pairs. 
 
 In order to quantify the anisotropicity of the emission, 
 the angle correlation distribution of an anisotropic hit pattern is compared to that of the isotropic 
-pattern. A $\chi^2$ test statistics is used where the reduced $\chi^2$ is defined as: 
+pattern. A $\chi^2$ test statistic is used where the reduced $\chi^2$ is defined as 
 
 \begin{equation}
 \chi^2_\nu = \frac{1}{\nu} \sum^{\nu}_{i=1} \frac{(O_i - E_i)^2}{E_i},
 \label{redchi2}
 \end{equation}
-
 where $E_i$ is the expected number of entries for an isotropic emission obtained from a sample of $10^5$ simulated events. 
 $O_i$ is the observed number of entries, and $\nu$ is the total number of angle correlation bins 
-which is also the degree of freedom. Sixty bins of identical width are used.
+which is also the number of dof . Sixty bins of identical width are used.
 
 
-To asses the needed exposure to claim discovery assuming one of the   pattern mentioned above, $10^4$ data sets are generated and tested against the null hypothesis. This is repeated for increasing number of events between $1-4000$ assuming different values of the anisotropy fraction ($r_{aniso}$). The <$\chi^2_\nu$> 
+To asses the needed exposure to claim discovery assuming one of the patterns mentioned above, $10^4$ data sets are generated and tested against the null hypothesis. This is repeated for increasing number of events between $1-4000$ assuming different values of the anisotropy fraction ($r_{aniso}$). The <$\chi^2_\nu$> 
 and its 2$\sigma$ band for pattern 1, assuming $r_{aniso} =0.1$ overlaid with the corresponding values  for an isotropic emission are shown in Fig.~\ref{fig:pattern1}.  
 The values of $N^{'}$, required to claim $5\sigma$ discovery, for different values of $r_{aniso}$ are calculated for each pattern as illustrated in Fig.~\ref{fig:convergence}.
 The number of events 
 $N^{'}$ for $r_{aniso} =0.1$ are summarized in Table~\ref{tab:AnisoPattern} for all emission patterns.
 
-A simulation with two typical sources that emit isotropically, a 10 $\mu$Ci $^{137}Cs$ (662\,keV gamma), and a 2.7 $\mu$Ci AmBe ( 5\,MeV neutron), shows that for an average yield of 
-50photons/event,  the rate of events in the detector is: $1.25\times10^{4}$\,events/day for NR and 625\,events/day for ER. 
+A simulation with two typical sources that emit isotropically, a 10 $\mu$Ci $^{137}$Cs (662\,keV gamma), and a 2.7 $\mu$Ci AmBe ( 5\,MeV neutron), shows that for an average yield of produced 
+50\,photons/event,  the rate of events in the detector is: $1.25\times10^{4}$\,events/day for NR and 625\,events/day for ER. 
 Therefore a system that can operate stably for few weeks 
 is expected to do reasonable measurements for ER and NR events.
 
@@ -141,10 +141,6 @@ with 60 degrees of freedom. $\sim3000$ events are needed to claim  5$\sigma$ dis
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.45\linewidth]{ConvergenceVsRaniso.pdf}
-\caption{The number of events needed for each emission pattern to achieve $5\sigma$ presented only for pattern 1 and 9. Here 
-$r_{aniso}$ = 0.1. for four different values of $r_{aniso}$.}
+\caption[Simulation of Number of events for discovery ]{The number of events needed for an emission pattern to achieve $5\sigma$ presented only for pattern 1 and 9, for different values of $r_{aniso}$.}
 \label{fig:convergence}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
