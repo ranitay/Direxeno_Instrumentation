@@ -1,0 +1,22 @@
+
+We use a time-series server based on influxdb (cite: https://www.influxdata.com/). This time series database is built specifically for handling metrics and events or measurements that are time-stamped. 
+For monitoring and visualization we use  
+Grafana (cite: https://grafana.com), an open source software for time series analytics. 
+
+The monitored data is collected from a variety of sensors and streamed to the database using the influxdb API integrated in python control scripts.
+It includes cryogenic system parameters: several temperatures  measured using a PT100 and a cryoconXXXX taken in different points around the sphere 
+and in the pools. To gain better understanding of the LXe we increased the number of temperature monitored positions by using a 2-wired 
+readout for some sensors, thus allowing the readout of more PT100 sensors with the same number of feedthroughs data channels.
+The temperature-resistance calibration curve were shifted accordingly.   
+Pressure/Vacuum reading of the outer- and inner-chamber were done using xxxx and xxxx sensors. 
+Termistors based sensors were installed on the cooling water lines, the compressor and around the laboratory for monitoring of the cryocooler operation. They were read using an arduino. 
+
+The xenon flow rate was measured using a xxx. A specially designed switch enabeled the transition between Filling/Circulation/Recooperation modes, thus 
+allowing the proper handling of the flow rate data in the data base (either adding to the total Xe amount, removing).
+
+
+The PMTs voltage, current and trigger rate is also monitoted and streamed to the database. 
+
+An optical camera installed. diff ertc.
+
+
