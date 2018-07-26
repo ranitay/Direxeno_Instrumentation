@@ -1,0 +1,11 @@
+\begin{thebibliography}{1}
+
+\bibitem{INFLUXDB}
+Influx data.
+\newblock \url{https://www.influxdata.com}.
+
+\bibitem{GRAFANA}
+Grafana labs.
+\newblock \url{http://grafana.com}.
+
+\end{thebibliography}
