@@ -1,22 +1,21 @@
 
-We use a time-series server based on influxdb (cite: https://www.influxdata.com/). This time series database is built specifically for handling metrics and events or measurements that are time-stamped. 
-For monitoring and visualization we use  
-Grafana (cite: https://grafana.com), an open source software for time series analytics. 
 
-The monitored data is collected from a variety of sensors and streamed to the database using the influxdb API integrated in python control scripts.
-It includes cryogenic system parameters: several temperatures  measured using a PT100 and a cryoconXXXX taken in different points around the sphere 
-and in the pools. To gain better understanding of the LXe we increased the number of temperature monitored positions by using a 2-wired 
-readout for some sensors, thus allowing the readout of more PT100 sensors with the same number of feedthroughs data channels.
-The temperature-resistance calibration curve were shifted accordingly.   
+A variety of sensors collect information from the various subsystems, that is being used for monitoring the stability and well-being of the system as well as understanding the complex Xe flow through the system.  
+We use a time-series server built specifically for handling events or measurements that are time-stamped based on influxdb~\cite{INFLUXDB}.
+For monitoring and visualization we use Grafana~\cite{GRAFANA}, an open source software for time series analytics.
+The monitored data is streamed to the database using the influxdb API integrated in python control scripts.
+
+%The copper adapter  holds two $100\Omega$ pt resistor\footnote{PT111 Lakeshore} which are connected to a PID reader\footnote{cryo-con model 18i Cryogenic Temp Monitor} for temperature measurements. 
+
+Ten $100\Omega$ pt resistors\footnote{PT111 Lakeshore}  are installed. Two in the copper adapter attached to the cold finger, and eight around the sphere, pools and pipes. The resistors are connected to a PID reader\footnote{cryo-con model 18i Cryogenic Temp Monitor} for temperature measurements.  To support a readout of more temperature sensors with the same number of feedthroughs data channels we replaced some of the 4-wires PT100 readout channels with a 2-wires one. The temperature-resistance calibration curves were shifted accordingly. The lesser measurment accuracy and stability were more than sufficient to identify liquid-gas transitions and temperature transients.
 Pressure/Vacuum reading of the outer- and inner-chamber were done using xxxx and xxxx sensors. 
-Termistors based sensors were installed on the cooling water lines, the compressor and around the laboratory for monitoring of the cryocooler operation. They were read using an arduino. 
+Termistors based sensors were installed on the cooling water lines, the compressor and near the system for monitoring of the cryocooler operation. They were read using an arduino board with an accuracy of <1 degree.   
+The xenon flow rate readings from the MFC are monitored, and a `homemade` switch read by the arduino lets the operator to move between Filling/Recooperation/Circulation modes to allow the proper handling of the flow rate data in the data base (either adding it to the total Xe amount, removing it or no change ).
+The PMTs voltage, current and trigger rate are also monitoted and streamed to the database. 
 
-The xenon flow rate was measured using a xxx. A specially designed switch enabeled the transition between Filling/Circulation/Recooperation modes, thus 
-allowing the proper handling of the flow rate data in the data base (either adding to the total Xe amount, removing).
+An off-the-shelf USB snake-camera is mounted in the outer vacuum chamber and watching the sphere. The camera si housed in a xx `` nipple with an optical window on one side and a xx bellow on the other opened to the air side. The camera allows the operator to visually inspect the status of the Xe within the sphere. A simple and fast image processing is constantly preformed and the difference between two consecutive optical snapshots is calculated and streamed into the data base.
 
+An additional script is montitoring the database, identifies missing information or other problems based on a set of rules, and alerts the operators via email and sms.
 
-The PMTs voltage, current and trigger rate is also monitoted and streamed to the database. 
-
-An optical camera installed. diff ertc.
 
 
